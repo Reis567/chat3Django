@@ -5,4 +5,11 @@
 {% block content %}
     <h2>Logout</h2>
     <p>Você saiu com sucesso. Obrigado por usar nosso site.</p>
+    <p>Estamos te redirecionando para a Página inicial</p>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{% url 'home' %}";  // Redireciona para a página inicial
+        }, 2000);  // 1000 milissegundos = 1 segundo
+    </script>
 {% endblock %}
