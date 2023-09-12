@@ -8,9 +8,6 @@ from django.contrib import messages
 
 # Create your views here.
 
-def home(request):
-    return render(request ,'home.html')
-
 # View de login personalizada
 class CustomLoginView(LoginView):
     template_name = 'user/login.html'  
@@ -33,3 +30,13 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'user/register.html', {'form': form})
+
+
+
+
+def home(request):
+    return render(request ,'home.html')
+
+
+def rooms(request):
+    return render(request, 'rooms.html' )
