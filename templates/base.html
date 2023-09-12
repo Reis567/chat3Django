@@ -10,15 +10,42 @@
         <header>
             <h1>MaricáChat</h1>
             <nav>
-                
+                <h3>
+                    <a href="{% url 'home' %}">Home</a>
+                </h3>
+        
+                <h3>
+                    <a href="#">Rooms</a>
+                </h3>
+        
+                <div class="nav-auth">
+                    {% if user.is_authenticated %}
+                        <!-- Se o usuário estiver logado, mostre a opção de logout -->
+                        <h3>
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </h3>
+                       
+                    {% else %}
+                        <!-- Se o usuário não estiver logado, mostre as opções de login e registro -->
+                        <h3>
+                            <a href="{% url 'login' %}">Login</a>
+                        </h3>
+                        
+                        <h3>
+                            <a href="{% url 'register' %}">Register</a>
+                        </h3>
+                        
+                    {% endif %}
+                </div>
             </nav>
         </header>
+        
     
         <div class="content">
             {% block content %}{% endblock %}
         </div>
     
-        <footer>
+        <footer class="footer">
             <p><a href="https://github.com/reis567" target="_blank">Reis567</a> &copy; {{ year }}.</p>
         </footer>
     </body>
