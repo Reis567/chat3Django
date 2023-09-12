@@ -11,7 +11,7 @@ header{
 header nav{
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 30px;
     
 }
 header a{
@@ -21,7 +21,14 @@ header a{
 nav .nav-auth{
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 30px;
+}
+
+.user-is-auth{
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
 }
 
 
@@ -40,4 +47,9 @@ nav .nav-auth{
 
 .footer a{
     color: white;
+}
+
+.main-sect{
+    height: 100vh;
+    width: 100vw;
 }

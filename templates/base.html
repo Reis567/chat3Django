@@ -8,7 +8,8 @@
     </head>
     <body>
         <header>
-            <h1>MaricáChat</h1>
+            <h1>
+                <a href="{% url 'home' %}">MaricáChat</a></h1>
             <nav>
                 <h3>
                     <a href="{% url 'home' %}">Home</a>
@@ -21,9 +22,16 @@
                 <div class="nav-auth">
                     {% if user.is_authenticated %}
                         <!-- Se o usuário estiver logado, mostre a opção de logout -->
-                        <h3>
-                            <a href="{% url 'logout' %}">Logout</a>
-                        </h3>
+                        <div class="user-is-auth">
+                            <h3>
+                                User  :  {{user.username}}
+                            </h3>
+    
+                            <h3>
+                                <a href="{% url 'logout' %}">Logout</a>
+                            </h3>
+                        </div>
+                        
                        
                     {% else %}
                         <!-- Se o usuário não estiver logado, mostre as opções de login e registro -->
@@ -41,9 +49,9 @@
         </header>
         
     
-        <div class="content">
+        <section class="main-sect">
             {% block content %}{% endblock %}
-        </div>
+        </section>
     
         <footer class="footer">
             <p><a href="https://github.com/reis567" target="_blank">Reis567</a> &copy; {{ year }}.</p>
