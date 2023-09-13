@@ -12,7 +12,7 @@
         {% for room in rooms %}
         <div>
             <li>{{ room.name }}</li>
-            <a target="_blank" href="{% url 'room' room.slug %}">Enter</a>
+            <a href="{% url 'room' room.slug %}">Enter</a>
         </div>
             
         {% endfor %}
