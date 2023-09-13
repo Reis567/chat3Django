@@ -7,6 +7,7 @@ from .models import Room
 
 
 
+
 # Create your views here.
 
 # View de login personalizada
@@ -44,3 +45,7 @@ def rooms(request):
     return render(request, 'rooms.html' ,{
         'rooms':rooms
     })
+
+
+def room(request):
+    pass

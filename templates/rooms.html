@@ -5,7 +5,17 @@
 {% block content %}
 
 <h2>Rooms</h2>
-{% for room in rooms %}
-<h1>{{room.name}}</h1>
-{% endfor %}
+{% if user.is_authenticated %}
+    <!-- Se o usuário estiver logado, exiba as informações das salas -->
+    <h1>Salas Disponíveis</h1>
+    <ul>
+        {% for room in rooms %}
+            <li>{{ room.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <!-- Se o usuário não estiver logado, redirecione para a página de login -->
+    <p>Você precisa estar logado para acessar as salas. <a href="{% url 'login' %}">Faça login aqui</a>.</p>
+{% endif %}
+
 {% endblock %}
