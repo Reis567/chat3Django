@@ -31,4 +31,5 @@ urlpatterns = [
     ## Chat urls
     path('chat/', include('chat.urls')),
     path('' , views.home , name='home'),
+    path('rooms/', views.rooms, name='rooms'),
 ]

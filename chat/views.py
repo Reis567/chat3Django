@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .models import Room
 
 
 
@@ -39,4 +40,7 @@ def home(request):
 
 
 def rooms(request):
-    return render(request, 'rooms.html' )
+    rooms = Room.objects.all().order_by('-pk')
+    return render(request, 'rooms.html' ,{
+        'rooms':rooms
+    })
