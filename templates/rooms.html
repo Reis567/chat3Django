@@ -10,7 +10,11 @@
     <h1>Salas Disponíveis</h1>
     <ul>
         {% for room in rooms %}
+        <div>
             <li>{{ room.name }}</li>
+            <a target="_blank" href="{% url 'room' room.slug %}">Enter</a>
+        </div>
+            
         {% endfor %}
     </ul>
 {% else %}
