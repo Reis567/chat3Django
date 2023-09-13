@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,HttpResponse
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -47,5 +47,13 @@ def rooms(request):
     })
 
 
-def room(request):
-    pass
+def room(request, slug):
+    try:
+        room = Room.objects.get(slug=slug)
+    except Room.DoesNotExist:
+        # Lidar com o caso em que a sala não existe
+        return HttpResponse("A sala não existe.", status=404)
+    
+    return render(request, 'room.html', {
+        'room': room
+    })
