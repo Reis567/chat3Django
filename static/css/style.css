@@ -1,11 +1,27 @@
+:root {
+    --prim-cl: #FFA07A;   /* Laranja pastel */
+    --sec-sl: #98DDCA;    /* Verde pastel */
+    --th-cl: #f2cb78;     /* Amarelo pastel */
+    --black-cl: #0b0b0b;  /* Cinza escuro */
+    --white-cl: #F0F0F0;  /* Cinza claro */
+}
+
+body {
+    background-image: url('/static/img/bg.svg');
+    background-size: cover;
+    width: 100%;
+    height: 1260px;
+}
+
+
 header{
     width: 100%;
     height: 7vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
-    color: white;
+    background-color: var(--sec-sl);
+    color: var(--black-cl);
 }
 
 header nav{
@@ -15,7 +31,7 @@ header nav{
     
 }
 header a{
-    color: white;
+    color: var(--black-cl);
 }
 
 nav .nav-auth{
@@ -53,5 +69,4 @@ nav .nav-auth{
     height: 100%;
     width: 100%;
 }
-
 
