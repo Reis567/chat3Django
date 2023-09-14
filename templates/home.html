@@ -4,6 +4,22 @@
 
 {% block content %}
 
+<section class="home">
+    <div class="home-content">
+        <div class="home-title">
+            <h1>Bem vindo ao MaricáChat</h1>
+            <h3>O que deseja fazer? </h3>
+        </div>
+        <div class="home-buttons">
+            <a href="{% url 'rooms' %}">Ver chats</a>
+            <a href="#">Meu perfil</a>
+
+        </div>
+        <a href="{% url 'logout' %}">Logout</a>
+
+    </div>
+</section>
+
 <h2>Home</h2>
 <a href="{% url 'rooms' %}">Rooms</a>
 {% endblock %}
