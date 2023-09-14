@@ -23,8 +23,8 @@
     
     <script>
         const roomSlug = JSON.parse(document.getElementById('room_slug').textContent);
-        alert(roomSlug)
-        const chatSocket = new WebSocket("ws://" + window.location.host + "/ws/"+ roomSlug + "/");
+        const chatSocket = new WebSocket("ws://" + window.location.host + "/ws/" + roomSlug + "/");
+
         chatSocket.onopen = function (e) {
           console.log("The connection was setup successfully !");
         };
