@@ -67,6 +67,10 @@ nav .nav-auth{
 
 .footer a{
     color: white;
+    transition: .5s;
+}
+.footer a:hover{
+    color: var(--prim-cl);
 }
 
 .home{
@@ -90,7 +94,13 @@ nav .nav-auth{
 }
 .home-content .logout{
     margin-top: 20px;
+    color: var(--white);
+    transition: .5s;
 }
+.home-content .logout:hover{
+    color: var(--prim-cl);
+}
+
 
 .home-title{
    text-align: center; 
