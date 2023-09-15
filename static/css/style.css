@@ -5,6 +5,8 @@
     --sec-stgr: #ffce84;
     --black:#000112;
     --white:#fff9f0;
+    --ylw-shd: 0px 0px 10px var(--sec-cl);
+    --ylw-shd-ltr: 0px 0px 7px var(--sec-cl);
 }
 
 body {
@@ -35,6 +37,15 @@ header nav{
     
 }
 header a{
+    color: var(--white);
+    transition: .5s;
+}
+header a:hover{
+    text-shadow: var(--ylw-shd);
+    color: var(--sec-stgr);
+}
+header i{
+    margin-right: 5px;
     color: var(--white);
 }
 
@@ -91,6 +102,7 @@ nav .nav-auth{
     background-color: var(--black);
     flex-wrap: wrap;
     border: 1px solid var(--sec-cl);
+    box-shadow: var(--ylw-shd-ltr);
 }
 .home-content .logout{
     margin-top: 20px;
