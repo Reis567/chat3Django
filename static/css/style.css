@@ -28,6 +28,7 @@ header{
     align-items: center;
     background-color: var(--black);
     color: var(--white);
+    box-shadow: var(--ylw-shd-ltr);
 }
 
 header nav{
@@ -73,6 +74,7 @@ nav .nav-auth{
     justify-content: center;
     align-items: center;
     color: white;
+    box-shadow: var(--ylw-shd-ltr);
 
 }
 
