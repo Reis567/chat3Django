@@ -151,3 +151,46 @@ nav .nav-auth{
     font-size: 160px;
     margin-bottom: 10px;
 }
+
+.home-buttons .login-home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px;
+    height: 100%;
+    width: 50%;
+    background-color: var(--prim-stgr);
+    border: 1px solid var(--sec-cl);
+}
+
+.login-home-button a{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+}
+.login-home-button a i{
+    font-size: 170px;
+}
+
+.home-buttons .register-home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px;
+    height: 100%;
+    width: 50%;
+    background-color: var(--prim-stgr);
+    border: 1px solid var(--sec-cl);
+}
+
+.register-home-button a{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+}
+.register-home-button a i{
+    font-size: 160px;
+    margin-bottom: 10px;
+}

@@ -7,28 +7,59 @@
 <section class="home">
     <div class="home-content">
         <div class="home-title">
-            <h1>Bem vindo {{request.user.username}}</h1>
-            <h3>O que deseja fazer? </h3>
+            {% if user.is_authenticated %}
+
+                <h1>Bem vindo {{request.user.username}}</h1>
+                <h3>O que deseja fazer? </h3>
+
+            {% else %}
+
+                <h1>Bem vindo</h1>
+                <h3>O que deseja fazer? </h3>
+
+            {% endif %}
         </div>
         <div class="home-buttons">
 
-            <div class="chat-button">
+            {% if user.is_authenticated %}
 
-                <a href="{% url 'rooms' %}">
-                    <i class="fa-solid fa-comment"></i>
-                    <br>
-                    Ver chats</a>
+                <div class="chat-button">
 
-            </div>
+                    <a href="{% url 'rooms' %}">
+                        <i class="fa-solid fa-comment"></i>
+                        <br>
+                        Ver chats</a>
 
-            <div class="profile-button">
+                </div>
 
-                <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                    <br>
-                    Meu perfil</a>
+                <div class="profile-button">
 
-            </div>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <br>
+                        Meu perfil</a>
+
+                </div>
+            {% else %}
+
+                <div class="login-home-button">
+
+                    <a href="{% url 'login' %}">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <br>
+                        Login</a>
+
+                </div>
+
+                <div class="register-home-button">
+
+                    <a href="{% url 'register' %}">
+                        <i class="fa-solid fa-ghost"></i>
+                        <br>
+                        Criar conta</a>
+
+                </div>
+            {% endif %}
             
             
 
