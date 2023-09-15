@@ -8,6 +8,7 @@
         <title>MaricáChat - {% block title %}{% endblock %}</title>
         <link rel="stylesheet"  href="{% static 'css/reset.css' %}">
         <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/127269bf17.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -27,7 +28,7 @@
                         <!-- Se o usuário estiver logado, mostre a opção de logout -->
                         <div class="user-is-auth">
                             <h3>
-                                User  :  {{user.username}}
+                                <i class="fa-solid fa-user"></i> User  :  {{user.username}}
                             </h3>
     
                             <h3>

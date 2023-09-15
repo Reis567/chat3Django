@@ -86,19 +86,30 @@ nav .nav-auth{
     width: 50%;
     background-color: var(--black);
     flex-wrap: wrap;
+    border: 1px solid var(--sec-cl);
+}
+.home-content .logout{
+    margin-top: 20px;
 }
 
 .home-title{
+   text-align: center; 
     color: var(--white);
-    font-size: 40px;
+    padding-bottom: 20px;
 }
 
+.home-title h1{
+    font-size: 35px;
+}
+.home-title h3{
+    font-size: 20px;
+}
 .home-buttons{
     height: 50%;
-    width: 50%;
+    width: 60%;
     display: flex;
-    flex-direction: row;
-    background-color: var(--white);
+    
+    padding: 5px;
 }
 
 .home-buttons .chat-button{
@@ -106,18 +117,37 @@ nav .nav-auth{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 30px;
     height: 100%;
     width: 50%;
-    background-color: var(--prim-cl);
+    background-color: var(--prim-stgr);
+    border: 1px solid var(--sec-cl);
+}
+.chat-button a{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+}
+.chat-button a i{
+    font-size: 170px;
 }
 .home-buttons .profile-button{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 30px;
     height: 100%;
     width: 50%;
     background-color: var(--prim-stgr);
+    border: 1px solid var(--sec-cl);
+}
+.profile-button a{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+}
+.profile-button a i{
+    font-size: 160px;
+    margin-bottom: 10px;
 }
