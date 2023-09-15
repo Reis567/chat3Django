@@ -102,6 +102,7 @@ nav .nav-auth{
     background-color: var(--black);
     flex-wrap: wrap;
     border: 1px solid var(--sec-cl);
+    border-radius: 15px;
     box-shadow: var(--ylw-shd-ltr);
 }
 .home-content .logout{
@@ -144,7 +145,16 @@ nav .nav-auth{
     width: 50%;
     background-color: var(--prim-stgr);
     border: 1px solid var(--sec-cl);
+    border-radius: 15px;
+    transition: .5s;
 }
+.chat-button:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+}
+
 .chat-button a{
     text-align: center;
     color: var(--white);
@@ -163,7 +173,16 @@ nav .nav-auth{
     width: 50%;
     background-color: var(--prim-stgr);
     border: 1px solid var(--sec-cl);
+    border-radius: 15px;
+    transition: .5s;
 }
+.profile-button:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+}
+
 .profile-button a{
     text-align: center;
     color: var(--white);
@@ -184,6 +203,15 @@ nav .nav-auth{
     width: 50%;
     background-color: var(--prim-stgr);
     border: 1px solid var(--sec-cl);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.login-home-button:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
 }
 
 .login-home-button a{
@@ -205,7 +233,16 @@ nav .nav-auth{
     width: 50%;
     background-color: var(--prim-stgr);
     border: 1px solid var(--sec-cl);
+    border-radius: 15px;
+    transition: .5s;
 }
+.register-home-button:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+}
+
 
 .register-home-button a{
     text-align: center;
