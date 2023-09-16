@@ -17,13 +17,15 @@
             {% if user.is_authenticated %}
 
                     {% for room in rooms %}
-                        <div class="chats-button">
-                            <h1>{{ room.name }}</h1>
-                            <a href="{% url 'room' room.slug %}">Enter</a>
-                        </div>
+
+                        <button class="chats-button">
+                            <span>
+                                <h1>{{ room.name }}</h1>
+                                <p>9999<i class="fa-solid fa-user"></i></p>
+                            </span>
                             
-                        
-                        
+                        </button>
+                            
                     {% endfor %}
 
             {% else %}
@@ -42,7 +44,7 @@
         </div>
 
     </div>
-    
+
 </section>
 
 
