@@ -18,13 +18,13 @@
 
                     {% for room in rooms %}
 
-                        <button class="chats-button">
+                        <button onclick="window.location.href = '{% url 'room' room.slug %}'" class="chats-button">
                             <span>
                                 <h1>{{ room.name }}</h1>
                                 <p>9999<i class="fa-solid fa-user"></i></p>
                             </span>
-                            
                         </button>
+                    
                             
                     {% endfor %}
 
@@ -46,6 +46,4 @@
     </div>
 
 </section>
-
-
 {% endblock %}
