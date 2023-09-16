@@ -1,25 +1,49 @@
 {% extends "base.html" %}
 
-{% block title %}Rooms{% endblock %}
+{% block title %}Chats{% endblock %}
 
 {% block content %}
 
-<h2>Rooms</h2>
-{% if user.is_authenticated %}
-    <!-- Se o usuário estiver logado, exiba as informações das salas -->
-    <h1>Salas Disponíveis</h1>
-    <ul>
-        {% for room in rooms %}
-        <div>
-            <li>{{ room.name }}</li>
-            <a href="{% url 'room' room.slug %}">Enter</a>
+<section class="chats">
+
+    <div class="chats-content">
+
+        <div class="chats-title">
+            <h1>Salas Disponíveis</h1>
         </div>
+
+        <div class="chats-buttons">
             
-        {% endfor %}
-    </ul>
-{% else %}
-    <!-- Se o usuário não estiver logado, redirecione para a página de login -->
-    <p>Você precisa estar logado para acessar as salas. <a href="{% url 'login' %}">Faça login aqui</a>.</p>
-{% endif %}
+            {% if user.is_authenticated %}
+
+                    {% for room in rooms %}
+                        <div class="chats-button">
+                            <h1>{{ room.name }}</h1>
+                            <a href="{% url 'room' room.slug %}">Enter</a>
+                        </div>
+                            
+                        
+                        
+                    {% endfor %}
+
+            {% else %}
+
+                <p>
+                    Você precisa estar logado para acessar as salas. 
+
+                    <a href="{% url 'login' %}">
+
+                        Faça login aqui
+
+                    </a>.
+                </p>
+
+            {% endif %}
+        </div>
+
+    </div>
+    
+</section>
+
 
 {% endblock %}
