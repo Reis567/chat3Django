@@ -23,42 +23,47 @@
 
             {% if user.is_authenticated %}
 
-                <div class="chat-button">
+                <button onclick="window.location.href = {% url 'rooms' %}" class="chat-button">
 
-                    <a href="{% url 'rooms' %}">
+                    <span>
                         <i class="fa-solid fa-comment"></i>
                         <br>
-                        Ver chats</a>
+                        Ver chats
+                    </span>
+                        
 
-                </div>
+                </button>
 
-                <div class="profile-button">
+                <button class="profile-button">
 
-                    <a href="#">
+                    <span>
                         <i class="fa-solid fa-user"></i>
                         <br>
-                        Meu perfil</a>
+                        Meu perfil
+                    </span>
 
-                </div>
+                </button>
             {% else %}
 
-                <div class="login-home-button">
+                <button onclick="window.location.href = {% url 'login' %}" class="login-home-button">
 
-                    <a href="{% url 'login' %}">
+                    <span>
                         <i class="fa-solid fa-right-to-bracket"></i>
                         <br>
-                        Login</a>
+                        Login
+                    </span>
 
-                </div>
+                </button>
 
-                <div class="register-home-button">
+                <button  onclick="window.location.href = {% url 'register' %}" class="register-home-button">
 
-                    <a href="{% url 'register' %}">
+                    <span>
                         <i class="fa-solid fa-ghost"></i>
                         <br>
-                        Criar conta</a>
+                        Criar conta
+                    </span>
 
-                </div>
+                </button>
             {% endif %}
             
             
