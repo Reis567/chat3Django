@@ -3,6 +3,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import Room,Message
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 
@@ -41,11 +42,23 @@ def home(request):
 
 
 def rooms(request):
-    rooms = Room.objects.all().order_by('-pk')
-    return render(request, 'rooms.html' ,{
-        'rooms':rooms
-    })
-
+    room_list = Room.objects.all().order_by('-pk')
+    
+    # Defina quantos itens por página você deseja exibir
+    items_per_page = 6
+    paginator = Paginator(room_list, items_per_page)
+    
+    page = request.GET.get('page')
+    try:
+        rooms = paginator.page(page)
+    except PageNotAnInteger:
+        # Se a página não for um número inteiro, mostre a primeira página
+        rooms = paginator.page(1)
+    except EmptyPage:
+        # Se a página estiver fora dos limites (por exemplo, página 9999), mostre a última página disponível
+        rooms = paginator.page(paginator.num_pages)
+    
+    return render(request, 'rooms.html', {'rooms': rooms})
 
 def room(request, slug):
     try:
