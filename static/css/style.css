@@ -269,26 +269,52 @@ nav .nav-auth{
     height: 50%;
     background: var(--black);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     color: var(--white);
+    border: 1px solid var(--sec-cl);
+    border-radius: 15px;
+    box-shadow: var(--ylw-shd-ltr);
 }
 .chats-title{
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 20px;
+    
 }
-
-.chats-buttons{
-    gap: 20px;
+.chats-buttons {
+    max-width: 800px;
+    gap: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); 
     align-items: center;
     justify-items: center;
-
 }
+
+
 
 .chats-buttons button{
     color: var(--white);
+    cursor: pointer;
+    background: var(--prim-stgr);
+    padding: 20px;
+    width: 110%;
+    border-radius: 15px;
+    border: 1px solid var(--sec-cl);
+    
+
+}
+.chats-buttons button span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.chats-buttons button span h1{
+    font-size: 16px;
+    margin-right: 25px;
+}
+.chats-buttons button span p{
+    font-size: 11px;
 }
