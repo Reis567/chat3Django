@@ -4,25 +4,45 @@
 
 {% block content %}
 
-<h2>Room</h2>
-<h1>{{room_name}}</h1>
+<section class="chat_room">
 
-    <div
-      class="chat__item__container"
-      id="id_chat_item_container"
-      style="font-size: 20px"
-    >
-    {% if messages %}
-        {% for message in messages %}
-            <p>{{message}}</p>
-        {% endfor %}
-    {% endif %}
-      <br />
-      <input type="text" id="id_message_send_input" />
-      <button type="submit" id="id_message_send_button">Send</button>
-      <br />
-      <br />
-    </div>
+      <div class="chat_room-content">
+
+            <div class="chat_room-title">
+
+                  <h1>{{ room_name }}</h1>
+
+            </div>
+
+            <div class="chat_room-messages" id="id_chat_item_container" style="font-size: 20px">
+
+                {% if messages %}
+
+                    {% for message in messages %}
+
+                        <p>{{ message }}</p>
+
+                    {% endfor %}
+
+                {% endif %}
+
+            </div>
+
+            <div class="chat_room-actions">
+
+                  <input type="text" id="id_message_send_input" />
+
+                  <button type="submit" id="id_message_send_button">Send</button>
+
+            </div>
+
+      </div>
+  
+</section>
+
+
+
+
 
     {{slug|json_script:"room_slug"}}
     {{room_name|json_script:"room_name"}}
