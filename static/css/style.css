@@ -263,3 +263,32 @@ nav .nav-auth{
     justify-content: center;
     align-items: center;
 }
+
+.chats-content{
+    width: 50%;
+    height: 50%;
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+}
+.chats-title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.chats-buttons{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.chats-buttons button{
+    color: var(--white);
+}
