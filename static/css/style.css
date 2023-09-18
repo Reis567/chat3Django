@@ -323,7 +323,14 @@ nav .nav-auth{
 .chats-buttons button span h1{
     font-size: 16px;
     margin-right: 25px;
+    font-weight: bolder;
+    text-transform: capitalize;
 }
 .chats-buttons button span p{
     font-size: 11px;
+    
+}
+
+.chats-buttons i{
+    margin-left: 5px;
 }
