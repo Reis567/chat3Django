@@ -341,3 +341,27 @@ nav .nav-auth{
 .pagination{
     margin-bottom: 10px;
 }
+
+.chat_room{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chat_room-content{
+    background: var(--black);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+    border: 1px solid var(--sec-cl);
+    border-radius: 15px;
+    box-shadow: var(--ylw-shd-ltr);
+
+}
