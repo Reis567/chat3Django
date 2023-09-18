@@ -304,6 +304,15 @@ nav .nav-auth{
     
 
 }
+
+.chats-buttons button:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+    transition: .5s;
+}
+
 .chats-buttons button span{
     display: flex;
     align-items: center;
