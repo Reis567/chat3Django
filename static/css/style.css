@@ -401,6 +401,10 @@ nav .nav-auth{
     background: var(--prim-stgr);
     border-radius: 5px;
 }
+
+/* Personalização da barra de rolagem para navegadores WebKit (Chrome e Safari) */
+
+  
 .chat_room-actions{
     width: 50%;
     padding-top: 15px;
@@ -408,7 +412,20 @@ nav .nav-auth{
     outline: none;
     height: 15%;
 
-}
+}.chat_room-messages::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .chat_room-messages::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+  
+  /* Personalização da barra de rolagem para navegadores Gecko (Firefox) */
+  .chat_room-messages {
+    scrollbar-width: thin;
+    scrollbar-color: var(--white); 
+  }
 
 
 .chat_room-actions input{
