@@ -429,3 +429,11 @@ nav .nav-auth{
     color: var(--white);
     font-size: 25px;
 }
+
+.chat_room-actions button:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+    transition: .5s;
+}
