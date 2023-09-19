@@ -412,7 +412,8 @@ nav .nav-auth{
     outline: none;
     height: 15%;
 
-}.chat_room-messages::-webkit-scrollbar {
+}
+.chat_room-messages::-webkit-scrollbar {
     width: 10px;
   }
   

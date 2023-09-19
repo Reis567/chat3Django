@@ -8,6 +8,10 @@ class Room(models.Model):
 
     name = models.CharField(max_length=20)
     slug = models.SlugField(max_length=50)
+    users = models.ManyToManyField(User)
+
+    def get_user_count(self):
+        return self.users.count()
 
     def __str__(self):
         return self.name  # Ou qualquer outra representação que você desejar
