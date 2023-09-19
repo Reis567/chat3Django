@@ -45,8 +45,8 @@
         <div class="pagination">
             <span class="step-links">
                 {% if rooms.has_previous %}
-                    <a href="?page=1">&laquo; first</a>
-                    <a href="?page={{ rooms.previous_page_number }}">previous</a>
+                    <a class="pagination-primeira btn-pagination" href="?page=1">&laquo; Primeira</a>
+                    <a class="paginaion-anterior btn-pagination" href="?page={{ rooms.previous_page_number }}">Anterior</a>
                 {% endif %}
         
                 <span class="current-page">
@@ -54,8 +54,8 @@
                 </span>
         
                 {% if rooms.has_next %}
-                    <a href="?page={{ rooms.next_page_number }}">next</a>
-                    <a href="?page={{ rooms.paginator.num_pages }}">last &raquo;</a>
+                    <a class="pagination-proxima btn-pagination" href="?page={{ rooms.next_page_number }}">Próxima</a>
+                    <a class="pagination-ultima btn-pagination" href="?page={{ rooms.paginator.num_pages }}">Última &raquo;</a>
                 {% endif %}
             </span>
         </div>

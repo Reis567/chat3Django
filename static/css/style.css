@@ -338,10 +338,6 @@ nav .nav-auth{
     margin-left: 5px;
 }
 
-.pagination{
-    margin-bottom: 10px;
-}
-
 .chat_room{
     height: 100vh;
     width: 100vw;
@@ -364,4 +360,28 @@ nav .nav-auth{
     border-radius: 15px;
     box-shadow: var(--ylw-shd-ltr);
 
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btn-pagination{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    background: var(--prim-stgr);
+    color: var(--white);
+    border: 1px solid var(--sec-cl);
+    border-radius: 7px;
+}
+
+.btn-pagination:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+    transition: .5s;
 }
