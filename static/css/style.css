@@ -392,22 +392,36 @@ nav .nav-auth{
 
 .chat_room-messages{
     width: 50%;
-    height: 80%;
+    height: 70%;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     gap: 20px;
+    overflow-y: scroll;
+    background: var(--prim-stgr);
+    border-radius: 5px;
 }
+.chat_room-actions{
+    width: 50%;
+    padding-top: 15px;
+    display: flex;
+    outline: none;
+    height: 15%;
 
+}
 
 
 .chat_room-actions input{
-    width: 100%;
+    width: 70%;
     background: var(--prim-stgr);
     border: 1px solid var(--sec-cl);
     border-radius: 5px;
+    color: var(--white);
 }
 .chat_room-actions button{
-    width: 100%;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 30%;
     background: var(--prim-stgr);
     border: 1px solid var(--sec-cl);
     border-radius: 5px;
