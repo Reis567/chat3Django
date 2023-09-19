@@ -417,6 +417,7 @@ nav .nav-auth{
     border: 1px solid var(--sec-cl);
     border-radius: 5px;
     color: var(--white);
+    font-weight: bolder;
 }
 .chat_room-actions button{
     cursor: pointer;
@@ -426,4 +427,5 @@ nav .nav-auth{
     border: 1px solid var(--sec-cl);
     border-radius: 5px;
     color: var(--white);
+    font-size: 25px;
 }

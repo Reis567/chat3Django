@@ -23,7 +23,7 @@
                         <span class="baloon-message">
 
                           {{message}}
-                          
+
                         </span>
 
                     {% endfor %}
@@ -55,6 +55,16 @@
         const roomSlug = JSON.parse(document.getElementById('room_slug').textContent);
         const roomName = JSON.parse(document.getElementById('room_name').textContent);
         const chatSocket = new WebSocket("ws://" + window.location.host + "/ws/" + roomSlug + "/");
+        const mensagensDiv = document.getElementById("id_chat_item_container");
+
+
+        function rolarParaOFinal() {
+          const ultimaMensagem = mensagensDiv.lastElementChild;
+          if (ultimaMensagem) {
+            ultimaMensagem.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+        
 
         chatSocket.onopen = function (e) {
           console.log("The connection was setup successfully !");
@@ -77,10 +87,12 @@
         chatSocket.onmessage = function (e) {
           const data = JSON.parse(e.data);
           var div = document.createElement("div");
+          
           div.innerHTML = data.username + " : " + data.message;
           document.querySelector("#id_message_send_input").value = "";
           document.querySelector("#id_chat_item_container").appendChild(div);
+          rolarParaOFinal();
         };
       </script>
-    
+
 {% endblock %}
