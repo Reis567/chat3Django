@@ -337,6 +337,30 @@ nav .nav-auth{
 .chats-buttons i{
     margin-left: 5px;
 }
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btn-pagination{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    background: var(--prim-stgr);
+    color: var(--white);
+    border: 1px solid var(--sec-cl);
+    border-radius: 7px;
+}
+
+.btn-pagination:hover{
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--ylw-shd-ltr);
+    transition: .5s;
+}
+
 
 .chat_room{
     height: 100vh;
@@ -362,26 +386,30 @@ nav .nav-auth{
 
 }
 
-.pagination{
+.chat_room-title h1{
+    font-size: 30px;
+}
+
+.chat_room-messages{
+    width: 50%;
+    height: 80%;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.btn-pagination{
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 10px;
+
+
+.chat_room-actions input{
+    width: 100%;
     background: var(--prim-stgr);
-    color: var(--white);
     border: 1px solid var(--sec-cl);
-    border-radius: 7px;
+    border-radius: 5px;
 }
-
-.btn-pagination:hover{
-    background-color: var(--black);
-    border: none;
-    cursor: pointer;
-    box-shadow: var(--ylw-shd-ltr);
-    transition: .5s;
+.chat_room-actions button{
+    width: 100%;
+    background: var(--prim-stgr);
+    border: 1px solid var(--sec-cl);
+    border-radius: 5px;
+    color: var(--white);
 }
