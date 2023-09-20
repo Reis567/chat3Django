@@ -21,7 +21,7 @@
                         <button onclick="window.location.href = '{% url 'room' room.slug %}'" class="chats-button">
                             <span>
                                 <h1>{{ room.name }}</h1>
-                                <p>9999<i class="fa-solid fa-user"></i></p>
+                                <p>{{room.get_user_count}}<i class="fa-solid fa-user"></i></p>
                             </span>
                         </button>
                     

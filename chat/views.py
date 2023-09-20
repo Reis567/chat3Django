@@ -44,7 +44,6 @@ def home(request):
 def rooms(request):
     room_list = Room.objects.all().order_by('-pk')
     
-    # Defina quantos itens por página você deseja exibir
     items_per_page = 6
     paginator = Paginator(room_list, items_per_page)
     
@@ -52,10 +51,8 @@ def rooms(request):
     try:
         rooms = paginator.page(page)
     except PageNotAnInteger:
-        # Se a página não for um número inteiro, mostre a primeira página
         rooms = paginator.page(1)
     except EmptyPage:
-        # Se a página estiver fora dos limites (por exemplo, página 9999), mostre a última página disponível
         rooms = paginator.page(paginator.num_pages)
     
     return render(request, 'rooms.html', {'rooms': rooms})
