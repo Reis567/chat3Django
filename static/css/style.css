@@ -265,15 +265,15 @@ nav .nav-auth{
 .chats-content{
     width: 50%;
     height: 50%;
-    background: var(--black);
+    background-color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    color: var(--white);
-    border: 1px solid var(--sec-cl);
+    color: var(--black);
+    border: 3px solid var(--sec-cl);
     border-radius: 15px;
-    box-shadow: var(--ylw-shd-ltr);
+    box-shadow: var(--ylw-shd);
 }
 .chats-title{
     font-size: 30px;
@@ -295,20 +295,21 @@ nav .nav-auth{
 
 
 .chats-buttons button{
-    color: var(--white);
+    color: var(--black);
     cursor: pointer;
-    background: var(--prim-stgr);
+    background: var(--sec-cl);
     padding: 20px;
     width: 110%;
     border-radius: 15px;
-    border: 1px solid var(--sec-cl);
+    border: 1px solid var(--prim-stgr);
+    font-weight: bolder;
     
 
 }
 
 .chats-buttons button:hover{
-    background-color: var(--black);
-    border: none;
+    background-color: var(--sec-stgr);
+    border: 3px solid var(--prim-stgr);
     cursor: pointer;
     box-shadow: var(--ylw-shd-ltr);
     transition: .5s;
@@ -328,12 +329,13 @@ nav .nav-auth{
     text-transform: capitalize;
 }
 .chats-buttons button span p{
-    font-size: 11px;
+    font-size: 15px;
     
 }
 
 .chats-buttons i{
     margin-left: 5px;
+    font-size: 15px;
 }
 .pagination{
     display: flex;
@@ -344,19 +346,14 @@ nav .nav-auth{
 .btn-pagination{
     margin-left: 5px;
     margin-right: 5px;
-    padding: 10px;
-    background: var(--prim-stgr);
-    color: var(--white);
-    border: 1px solid var(--sec-cl);
-    border-radius: 7px;
+    color: var(--black);
+    font-weight: bold;
 }
 
 .btn-pagination:hover{
-    background-color: var(--black);
-    border: none;
-    cursor: pointer;
-    box-shadow: var(--ylw-shd-ltr);
+    color:  var(--sec-cl);
     transition: .5s;
+
 }
 
 
