@@ -1,8 +1,8 @@
 :root{
     --prim-cl: #050850;
-    --prim-stgr:#000228;
+    --prim-stgr:#000222;
     --sec-cl: #F49F1C;
-    --sec-stgr: #ffce84;
+    --sec-stgr: #fbbd5f;
     --black:#000112;
     --white:#fff9f0;
     --ylw-shd: 0px 0px 10px var(--sec-cl);
@@ -26,7 +26,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--prim-stgr);
     color: var(--white);
     box-shadow: var(--ylw-shd-ltr);
 }
@@ -69,7 +69,7 @@ nav .nav-auth{
     bottom: 0;
     width: 100%;
     height: 5vh;
-    background-color: black;
+    background-color: var(--prim-stgr);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,25 +101,25 @@ nav .nav-auth{
     flex-direction: column;
     height: 50%;
     width: 50%;
-    background-color: var(--black);
+    background-color: var(--white);
     flex-wrap: wrap;
-    border: 1px solid var(--sec-cl);
+    border: 3px solid var(--sec-cl);
     border-radius: 15px;
-    box-shadow: var(--ylw-shd-ltr);
+    box-shadow: var(--ylw-shd);
 }
 .home-content .logout{
     margin-top: 20px;
-    color: var(--white);
+    color: var(--black);
     transition: .5s;
 }
 .home-content .logout:hover{
-    color: var(--prim-cl);
+    color: var(--sec-cl);
 }
 
 
 .home-title{
-   text-align: center; 
-    color: var(--white);
+    text-align: center; 
+    color: var(--black);
     padding-bottom: 20px;
 }
 
@@ -133,7 +133,6 @@ nav .nav-auth{
     height: 50%;
     width: 60%;
     display: flex;
-    
     padding: 5px;
 }
 
@@ -145,21 +144,20 @@ nav .nav-auth{
     margin-right: 30px;
     height: 100%;
     width: 50%;
-    background-color: var(--prim-stgr);
-    border: 1px solid var(--sec-cl);
+    background-color: var(--sec-cl);
+    border: 1px solid var(--prim-stgr);
     border-radius: 15px;
-    transition: .5s;
+    transition: .3s;
 }
 .chat-button:hover{
-    background-color: var(--black);
-    border: none;
+    background-color: var(--sec-stgr);
     cursor: pointer;
-    box-shadow: var(--ylw-shd-ltr);
+    border: 3px solid var(--prim-stgr);
 }
 
 .chat-button span{
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
 }
 .chat-button span i{
@@ -173,21 +171,20 @@ nav .nav-auth{
     margin-left: 30px;
     height: 100%;
     width: 50%;
-    background-color: var(--prim-stgr);
-    border: 1px solid var(--sec-cl);
+    background-color: var(--sec-cl);
+    border: 1px solid var(--prim-stgr);
     border-radius: 15px;
-    transition: .5s;
+    transition: .3s;
 }
 .profile-button:hover{
-    background-color: var(--black);
-    border: none;
+    background-color: var(--sec-stgr);
     cursor: pointer;
-    box-shadow: var(--ylw-shd-ltr);
+    border: 3px solid var(--prim-stgr);
 }
 
 .profile-button span{
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
 }
 .profile-button span i{
@@ -203,22 +200,21 @@ nav .nav-auth{
     margin-right: 30px;
     height: 100%;
     width: 50%;
-    background-color: var(--prim-stgr);
-    border: 1px solid var(--sec-cl);
+    background-color: var(--sec-cl);
+    border: 1px solid var(--prim-stgr);
     border-radius: 15px;
-    transition: .5s;
+    transition: .3s;
 }
 
 .login-home-button:hover{
-    background-color: var(--black);
-    border: none;
+    background-color: var(--sec-stgr);
     cursor: pointer;
-    box-shadow: var(--ylw-shd-ltr);
+    border: 3px solid var(--prim-stgr);
 }
 
 .login-home-button span{
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
 }
 .login-home-button span i{
@@ -233,22 +229,21 @@ nav .nav-auth{
     margin-right: 30px;
     height: 100%;
     width: 50%;
-    background-color: var(--prim-stgr);
-    border: 1px solid var(--sec-cl);
+    background-color: var(--sec-cl);
+    border: 1px solid var(--prim-stgr);
     border-radius: 15px;
-    transition: .5s;
+    transition: .3s;
 }
 .register-home-button:hover{
-    background-color: var(--black);
-    border: none;
+    background-color: var(--sec-stgr);
     cursor: pointer;
-    box-shadow: var(--ylw-shd-ltr);
+    border: 3px solid var(--prim-stgr);
 }
 
 
 .register-home-button span{
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
 }
 .register-home-button span i{
