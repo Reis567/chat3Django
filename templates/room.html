@@ -20,7 +20,7 @@
 
                     {% for message in messages %}
 
-                        <span class="baloon-message">
+                        <span class="{% if message.user.username == request.user.username %}chat_room-balao-eu{% else %}chat_room-balao-ele{% endif %}">
 
                           {{message}}
 
@@ -87,12 +87,21 @@
         chatSocket.onmessage = function (e) {
           const data = JSON.parse(e.data);
           var div = document.createElement("div");
-          
+      
+          if (data.username === "{{ request.user.username }}") {
+              // Se a mensagem foi enviada pelo usuário atual
+              div.className = "baloon-message chat_room-balao-eu";
+          } else {
+              // Se a mensagem foi enviada por outra pessoa
+              div.className = "baloon-message chat_room-balao-ele";
+          }
+      
           div.innerHTML = data.username + " : " + data.message;
           document.querySelector("#id_message_send_input").value = "";
           document.querySelector("#id_chat_item_container").appendChild(div);
           rolarParaOFinal();
-        };
+      };
+      
       </script>
 
 {% endblock %}

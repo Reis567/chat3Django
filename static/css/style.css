@@ -400,6 +400,7 @@ nav .nav-auth{
     overflow-y: scroll;
     background: var(--prim-stgr);
     border-radius: 5px;
+    
 }
 
 /* Personalização da barra de rolagem para navegadores WebKit (Chrome e Safari) */
@@ -455,3 +456,46 @@ nav .nav-auth{
     box-shadow: var(--ylw-shd-ltr);
     transition: .5s;
 }
+
+.chat_room-balao-ele{
+    background: var(--sec-cl);
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+}
+
+.chat_room-balao-ele::before{
+    content: '';
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid var(--sec-cl);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top:4px;
+    left:-18px;
+  
+}
+
+.chat_room-balao-eu{
+    background: var(--prim-cl);
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.chat_room-balao-eu::before{
+    content: '';
+    position: absolute;
+    border-left: 10px solid var(--prim-cl);
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top:4px;
+    right:-18px;
+}
+
