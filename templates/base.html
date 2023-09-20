@@ -17,12 +17,12 @@
             <nav>
                 <h3>
                     <a href="{% url 'home' %}">
-                        <i class="fa-solid fa-house"></i>  Início</a>
+                        <i class="icon-h fa-solid fa-house"></i>  Início</a>
                 </h3>
         
                 <h3>
                     <a href="{% url 'rooms' %}">
-                        <i class="fa-solid fa-comment"></i>  Chats</a>
+                        <i class="icon-h fa-solid fa-comment"></i>  Chats</a>
                 </h3>
         
                 <div class="nav-auth">
@@ -30,13 +30,16 @@
                         <!-- Se o usuário estiver logado, mostre a opção de logout -->
                         <div class="user-is-auth">
                             <h3>
-                                <i class="fa-solid fa-user"></i> 
-                                 Usuário   :   {{user.username}}
+                                <a href="#">
+                                    <i class="icon-h fa-solid fa-user"></i> 
+                                    {{user.username}}
+                                </a>
+                                
                             </h3>
     
                             <h3>
                                 <a href="{% url 'logout' %}">
-                                 <i class="fa-solid fa-right-from-bracket"></i>  Sair</a>
+                                 <i class="icon-h fa-solid fa-right-from-bracket"></i>  Sair</a>
                             </h3>
                         </div>
                         
@@ -45,13 +48,13 @@
                         <!-- Se o usuário não estiver logado, mostre as opções de login e registro -->
                         <h3>
                             <a href="{% url 'login' %}">
-                                <i class="fa-solid fa-door-open"></i> 
+                                <i class="icon-h fa-solid fa-door-open"></i> 
                                  Login</a>
                         </h3>
                         
                         <h3>
                             <a href="{% url 'register' %}">
-                                <i class="fa-solid fa-ghost"></i>  Criar conta</a>
+                                <i class="icon-h fa-solid fa-ghost"></i>  Criar conta</a>
                         </h3>
                         
                     {% endif %}

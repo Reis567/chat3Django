@@ -41,13 +41,16 @@ header a{
     color: var(--white);
     transition: .5s;
 }
-header a:hover{
-    text-shadow: var(--ylw-shd);
-    color: var(--sec-stgr);
+header a:hover {
+    color: var(--sec-cl);
 }
-header i{
+header a:hover .icon-h{
+    color: var(--sec-cl);
+}
+.icon-h{
     margin-right: 5px;
     color: var(--white);
+    transition: .5s;
 }
 
 nav .nav-auth{
