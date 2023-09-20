@@ -456,46 +456,47 @@ nav .nav-auth{
     box-shadow: var(--ylw-shd-ltr);
     transition: .5s;
 }
-
-.chat_room-balao-ele{
+.chat_room-balao-ele {
     background: var(--sec-cl);
-    width: 200px;
-    height: 80px;
     border-radius: 10px;
     position: relative;
-    padding: 5px;
+    padding: 10px; 
+    display: inline-block;
+    max-width: 70%; 
+    word-wrap: break-word; 
+    margin: 5px; 
 }
 
-.chat_room-balao-ele::before{
+.chat_room-balao-ele::before {
     content: '';
     position: absolute;
     border-left: 10px solid transparent;
     border-right: 10px solid var(--sec-cl);
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    top:4px;
-    left:-18px;
-  
+    top: 4px;
+    left: -18px;
 }
 
-.chat_room-balao-eu{
+.chat_room-balao-eu {
     background: var(--prim-cl);
-    width: 200px;
-    height: 80px;
     border-radius: 10px;
     position: relative;
-    padding: 5px;
     align-self: flex-end;
+    padding: 10px; 
+    display: inline-block;
+    max-width: 70%; 
+    word-wrap: break-word; 
+    margin: 5px; 
 }
 
-.chat_room-balao-eu::before{
+.chat_room-balao-eu::before {
     content: '';
     position: absolute;
     border-left: 10px solid var(--prim-cl);
     border-right: 10px solid transparent;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    top:4px;
-    right:-18px;
+    top: 4px;
+    right: -18px;
 }
-
