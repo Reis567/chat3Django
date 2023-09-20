@@ -4,18 +4,15 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import Room,Message
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth.decorators import login_required
 
 
 
-
-
-# Create your views here.
-
-# View de login personalizada
 class CustomLoginView(LoginView):
     template_name = 'user/login.html'  
 
 
+@login_required
 def custom_logout(request):
     # Realiza o logout do usuário
     LogoutView.as_view()(request) 
@@ -41,6 +38,7 @@ def home(request):
     return render(request ,'home.html')
 
 
+@login_required
 def rooms(request):
     room_list = Room.objects.all().order_by('-pk')
     
@@ -57,6 +55,7 @@ def rooms(request):
     
     return render(request, 'rooms.html', {'rooms': rooms})
 
+@login_required
 def room(request, slug):
     try:
         room_name = Room.objects.get(slug=slug).name

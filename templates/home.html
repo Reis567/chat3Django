@@ -28,7 +28,7 @@
                     <span>
                         <i class="fa-solid fa-comment"></i>
                         <br>
-                        Ver chats
+                        Chats
                     </span>
                         
 
@@ -69,10 +69,16 @@
             
 
         </div>
-        <a class="logout" href="{% url 'logout' %}">
-            <i class="fa-solid fa-right-from-bracket"></i>
-             Logout</a>
+        {% if user.is_authenticated %}
 
+                <a class="logout" href="{% url 'logout' %}">
+                    
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+                </a>
+
+        {% endif %}
     </div>
 </section>
 
