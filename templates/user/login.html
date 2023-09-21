@@ -10,21 +10,18 @@
                 Login
             </h1>
         </div>
-        <div class="login-fields">
-            <form method="post">
-                {% csrf_token %}
-        
+        <form method="post">
+            {% csrf_token %}
+            <div class="login-fields">
                 <label for="id_username">Username:</label>
                 <input type="text" name="username" id="id_username" required>
         
                 <label for="id_password">Password:</label>
                 <input type="password" name="password" id="id_password" required>
-        
-        
-                <input type="submit" value="Login">
-            </form>
-        </div>
-        <input type="submit" value="Login">
+            </div>
+    
+            <input class="login-btn" type="submit" value="Entrar">
+        </form>
     </div>
 </section>
 
