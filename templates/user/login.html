@@ -13,16 +13,24 @@
         <form method="post">
             {% csrf_token %}
             <div class="login-fields">
-                <label for="id_username">Username:</label>
-                <input type="text" name="username" id="id_username" required>
+                
+                <div class="single-input">
+                    <input class="input-user" type="text" name="username" id="id_username" required autocomplete="off">
+                    <label for="id_username">Username</label>
+                </div>
+                
         
-                <label for="id_password">Password:</label>
-                <input type="password" name="password" id="id_password" required>
+                <div class="single-input">
+                    <input class="input-pass" type="password" name="password" id="id_password" required autocomplete="off">
+                    <label for="id_password">Password</label>
+                </div>
+
             </div>
     
             <input class="login-btn" type="submit" value="Entrar">
         </form>
     </div>
 </section>
+
 
 {% endblock %}
