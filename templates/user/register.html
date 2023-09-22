@@ -17,21 +17,31 @@
     
             <div class="register-fields">
     
-                <label for="{{ form.username.id_for_label }}">Nome de usuário:</label>
-                {{ form.username }}
+                <div class="single-input">
+                    {{ form.username }}
+                    <label for="{{ form.username.id_for_label }}">Nome de usuário</label>
+                    
+                </div>
+                
+    
+                <div class="single-input">
+                    {{ form.password1 }}
+                    <label for="{{ form.password1.id_for_label }}">Senha</label>
+                    
+                </div>
+                
     
     
-                <label for="{{ form.password1.id_for_label }}">Senha:</label>
-                {{ form.password1 }}
-    
-    
-    
-                <label for="{{ form.password2.id_for_label }}">Confirme a senha:</label>
-                {{ form.password2 }}
+                <div class="single-input">
+                    {{ form.password2 }}
+                    <label for="{{ form.password2.id_for_label }}">Confirme a senha</label>
+                    
+                </div>
+                
     
             </div>
     
-            <button type="submit">Criar</button>
+            <button class="register-btn" type="submit">Criar</button>
         </form>
     </div>
 
