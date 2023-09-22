@@ -9,12 +9,12 @@
         <div class="home-title">
             {% if user.is_authenticated %}
 
-                <h1>Bem vindo {{request.user.username}}</h1>
+                <h1>Bem vindo(a) {{request.user.username}}</h1>
                 <h3>O que deseja fazer? </h3>
 
             {% else %}
 
-                <h1>Bem vindo</h1>
+                <h1>Bem vindo(a)</h1>
                 <h3>O que deseja fazer? </h3>
 
             {% endif %}

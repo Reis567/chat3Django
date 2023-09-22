@@ -15,20 +15,21 @@
             <h1>
                 <a href="{% url 'home' %}">MaricáChat</a></h1>
             <nav>
-                <h3>
-                    <a href="{% url 'home' %}">
-                        <i class="icon-h fa-solid fa-house"></i>  Início</a>
-                </h3>
-        
-                <h3>
-                    <a href="{% url 'rooms' %}">
-                        <i class="icon-h fa-solid fa-comment"></i>  Chats</a>
-                </h3>
+                
         
                 <div class="nav-auth">
                     {% if user.is_authenticated %}
                         <!-- Se o usuário estiver logado, mostre a opção de logout -->
                         <div class="user-is-auth">
+                            <h3>
+                                <a href="{% url 'home' %}">
+                                    <i class="icon-h fa-solid fa-house"></i>  Início</a>
+                            </h3>
+                    
+                            <h3>
+                                <a href="{% url 'rooms' %}">
+                                    <i class="icon-h fa-solid fa-comment"></i>  Chats</a>
+                            </h3>
                             <h3>
                                 <a href="#">
                                     <i class="icon-h fa-solid fa-user"></i> 
@@ -46,6 +47,9 @@
                        
                     {% else %}
                         <!-- Se o usuário não estiver logado, mostre as opções de login e registro -->
+                        <h3>
+                            Bem vindo(a)
+                        </h3>
                         <h3>
                             <a href="{% url 'login' %}">
                                 <i class="icon-h fa-solid fa-door-open"></i> 
