@@ -3,13 +3,23 @@
 {% block title %}Logout{% endblock %}
 
 {% block content %}
-    <h2>Logout</h2>
-    <p>Você saiu com sucesso. Obrigado por usar nosso site.</p>
-    <p>Estamos te redirecionando para a Página inicial</p>
+<section class="logout-w">
+    <div class="logout-content">
 
-    <script>
-        setTimeout(function() {
-            window.location.href = "{% url 'home' %}";  // Redireciona para a página inicial
-        }, 2000);  // 1000 milissegundos = 1 segundo
-    </script>
+        <div class="logout-title">
+            <h1>
+                Logout
+            </h1>
+        </div>
+
+        <p>Você saiu com sucesso. Obrigado por usar nosso site.</p>
+        <p>Estamos te redirecionando para a <strong>Página inicial</strong></p>
+
+        <script>
+            setTimeout(function() {
+                window.location.href = "{% url 'home' %}";  // Redireciona para a página inicial
+            }, 2000);  // 2000 milissegundos = 2 segundos
+        </script>
+    </div>
+</section>
 {% endblock %}
