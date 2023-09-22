@@ -20,7 +20,7 @@
 
                     {% for message in messages %}
 
-                        <span class="{% if message.user.username == request.user.username %}chat_room-balao-eu{% else %}chat_room-balao-ele{% endif %}">
+                        <span class="{% if message.user.username == user_name %}chat_room-balao-eu{% else %}chat_room-balao-ele{% endif %}">
 
                           {{message}}
 
@@ -82,13 +82,13 @@
           var messageInput = document.querySelector(
             "#id_message_send_input"
           ).value;
-          chatSocket.send(JSON.stringify({ message: messageInput, username : "{{request.user.username}}",room_name:roomName}));
+          chatSocket.send(JSON.stringify({ message: messageInput, username : "{{user_name}}",room_name:roomName}));
         };
         chatSocket.onmessage = function (e) {
           const data = JSON.parse(e.data);
           var div = document.createElement("div");
       
-          if (data.username === "{{ request.user.username }}") {
+          if (data.username === "{{ user_name }}") {
               // Se a mensagem foi enviada pelo usuário atual
               div.className = "baloon-message chat_room-balao-eu";
           } else {

@@ -1,14 +1,14 @@
 import json
 from asgiref.sync import sync_to_async
 from channels.generic.websocket import AsyncWebsocketConsumer
-from chat.models import Room, Message
+from chat.models import Room, Message,UserProfile
 from django.contrib.auth.models import User
 
 # Função assíncrona para salvar a mensagem no banco de dados
 @sync_to_async
 def save_message_async(message, username, room_slug):
     try:
-        user = User.objects.get(username=username)
+        user = UserProfile.objects.get(user=user)
         room = Room.objects.get(slug=room_slug)
         Message.objects.create(user=user, room=room, content=message)
     except User.DoesNotExist:

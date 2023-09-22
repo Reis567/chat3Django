@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 def user_directory_path(instance, filename):
     # Gera o caminho dinâmico baseado no nome de usuário e nome do arquivo
     return f'profile_photos/{instance.user.username}/{filename}'
@@ -36,7 +37,7 @@ class Message(models.Model):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     photo = models.ImageField(upload_to=user_directory_path, blank=True, null=True)

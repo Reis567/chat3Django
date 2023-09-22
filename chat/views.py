@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect,HttpResponse
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from .models import Room,Message
+from django.contrib.auth.models import User
+from .models import Room,Message,UserProfile
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 
@@ -60,6 +61,8 @@ def room(request, slug):
     try:
         room_name = Room.objects.get(slug=slug).name
         messages = Message.objects.filter(room=Room.objects.get(slug=slug))
+        user_profile = UserProfile.objects.get(user=request.user)
+        username = user_profile.user.username
     except Room.DoesNotExist:
         # Lidar com o caso em que a sala não existe
         return HttpResponse("A sala não existe.", status=404)
@@ -69,7 +72,8 @@ def room(request, slug):
             {
                 "room_name":room_name,
                 "slug":slug,
-                'messages':messages})
+                'messages':messages,
+                'user_name':username,})
 
     
     
