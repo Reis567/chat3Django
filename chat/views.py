@@ -73,7 +73,8 @@ def room(request, slug):
                 "room_name":room_name,
                 "slug":slug,
                 'messages':messages,
-                'user_name':username,})
+                'user_name':username,
+                'user_profile':user_profile})
 
     
     
