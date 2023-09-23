@@ -11,15 +11,7 @@
             </h1>
         </div>
         
-        {% if messages %}
-        <div class="messages">
-            <ul class="messages">
-                {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+
         
         <form method="post">
             {% csrf_token %}
@@ -40,6 +32,15 @@
     
             <input class="login-btn" type="submit" value="Entrar">
         </form>
+        {% if messages %}
+        <div class="messages">
+            <ul class="messages-ul">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %}

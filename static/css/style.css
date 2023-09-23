@@ -696,3 +696,9 @@ nav .nav-auth{
 .logout-title{
     font-size: 30px;
 }
+
+
+.messages-ul li{
+    font-size: 13px;
+    color: red;
+}
