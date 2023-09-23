@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.contrib.auth.models import User
 
 
@@ -46,3 +48,12 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+    
+
+# Função para criar ou obter o UserProfile associado a um User
+def get_or_create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.get_or_create(user=instance)
+
+# Registrar o sinal para criar ou obter o UserProfile
+post_save.connect(get_or_create_user_profile, sender=User)
