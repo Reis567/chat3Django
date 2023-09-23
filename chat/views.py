@@ -6,11 +6,15 @@ from django.contrib.auth.models import User
 from .models import Room,Message,UserProfile
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth import login
 
 
 class CustomLoginView(LoginView):
-    template_name = 'user/login.html'  
+    template_name = 'user/login.html'
+    
+    def form_invalid(self, form):
+        messages.error(self.request, 'Usuário ou senha incorretos.')
+        return super().form_invalid(form)
 
 
 @login_required
@@ -24,12 +28,19 @@ def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Conta criada para {username}! Agora você pode fazer login.')
-            return redirect('login')  
+            login(request, user)  # Autentica o usuário recém-criado
+            messages.success(request, f'Conta criada para {username}! Você está agora logado.')
+            return redirect('home')  # Redireciona para a página inicial ou qualquer outra página desejada após o registro bem-sucedido
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f'{field}: {error}')
+    
     else:
         form = UserCreationForm()
+    
     return render(request, 'user/register.html', {'form': form})
 
 
