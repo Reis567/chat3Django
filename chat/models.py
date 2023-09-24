@@ -40,14 +40,15 @@ class Message(models.Model):
 
 class UserProfile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
     photo = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
     description = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.user.username
+
     
 
 # Função para criar ou obter o UserProfile associado a um User

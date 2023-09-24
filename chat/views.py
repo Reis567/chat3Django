@@ -7,6 +7,7 @@ from .models import Room,Message,UserProfile
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
+from .forms import UserProfileForm
 
 
 class CustomLoginView(LoginView):
@@ -87,5 +88,20 @@ def room(request, slug):
                 'user_name':username,
                 'user_profile':user_profile})
 
-    
-    
+@login_required
+def user_profile(request):
+    # Obtém o perfil do usuário logado ou cria um novo se não existir
+    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Perfil atualizado com sucesso.')
+            return redirect('user_profile')
+        else:
+            messages.error(request, 'Por favor, corrija os erros no formulário.')
+    else:
+        form = UserProfileForm(instance=user_profile)
+
+    return render(request, 'user/user_profile.html', {'form': form, 'user_profile': user_profile})
