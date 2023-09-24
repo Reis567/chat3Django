@@ -41,6 +41,7 @@ class Message(models.Model):
 class UserProfile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, blank=True)
+    email= models.EmailField(unique=True,null=True)
     last_name = models.CharField(max_length=30, blank=True)
     photo = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
     description = models.TextField(blank=True)

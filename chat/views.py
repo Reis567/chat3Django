@@ -8,6 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .forms import UserProfileForm
+from django.db import IntegrityError
 
 
 class CustomLoginView(LoginView):
@@ -90,15 +91,17 @@ def room(request, slug):
 
 @login_required
 def user_profile(request):
-    # Obtém o perfil do usuário logado ou cria um novo se não existir
     user_profile, created = UserProfile.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Perfil atualizado com sucesso.')
-            return redirect('user_profile')
+            try:
+                form.save()
+                messages.success(request, 'Perfil atualizado com sucesso.')
+                return redirect('user_profile')
+            except IntegrityError:
+                messages.error(request, 'Este endereço de e-mail já está em uso. Por favor, escolha outro endereço de e-mail.')
         else:
             messages.error(request, 'Por favor, corrija os erros no formulário.')
     else:
