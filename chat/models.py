@@ -17,9 +17,6 @@ class Room(models.Model):
     slug = models.SlugField(max_length=50)
     users = models.ManyToManyField(User)
 
-    def get_user_count(self):
-        return self.users.count()
-
     def __str__(self):
         return self.name  # Ou qualquer outra representação que você desejar
 
@@ -41,7 +38,7 @@ class Message(models.Model):
 class UserProfile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, blank=True)
-    email= models.EmailField(unique=True,null=True)
+    email= models.EmailField(default="email@email.com",unique=True,null=True)
     last_name = models.CharField(max_length=30, blank=True)
     photo = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
     description = models.TextField(blank=True)

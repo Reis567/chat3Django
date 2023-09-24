@@ -10,7 +10,7 @@ def save_message_async(message, username, room_slug):
     try:
         user = User.objects.get(username=username)
         room = Room.objects.get(slug=room_slug)
-        user_profile = UserProfile.objects.get(user=user)
+        user_profile = UserProfile.objects.get(user=user) 
         Message.objects.create(user=user, room=room, content=message)
     except User.DoesNotExist:
         print(f"User '{username}' does not exist.")
