@@ -1,30 +1,45 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}{{request.user}}{% endblock %}
 
 {% block content %}
 <section class="profile">
     <div class="profile-content">
         <div class="profile-banner">
+            {% if user_profile.banner %}
 
+                <img src="{{ user_profile.banner.url }}" alt="banner">
+            {% else %}
+
+                <img src="{% static 'img/banner.png' %}" alt="Default Banner">
+            {% endif %}
+            
         </div>
         <div class="profile-pic">
+            {% if user_profile.photo %}
 
+                <img src="{{ user_profile.photo.url }}" alt="photo profile">
+
+            {% else %}
+
+                <img src="{% static 'img/profile.png' %}" alt="Default Profile Photo">
+                
+            {% endif %}
         </div>
         <div class="profile-user">
-
+            prof-user
         </div>
         <div class="profile-infos">
             <div class="profile-name">
                 <div class="profile-frst">
-
+                    nome
                 </div>
                 <div class="profile-last">
-
+                    sobrenome
                 </div>
             </div>
             <div class="profile-desc">
-
+                desc
             </div>
 
         </div>

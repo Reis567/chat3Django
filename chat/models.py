@@ -8,6 +8,10 @@ def user_directory_path(instance, filename):
     # Gera o caminho dinâmico baseado no nome de usuário e nome do arquivo
     return f'profile_photos/{instance.user.username}/{filename}'
 
+def banner_directory_path(instance, filename):
+    # Gera o caminho dinâmico baseado no nome de usuário e nome do arquivo
+    return f'profile_photos/{instance.user.username}/banners/{filename}'
+
 class Room(models.Model):
     class Meta:
         verbose_name = 'Sala'
@@ -41,6 +45,7 @@ class UserProfile(models.Model):
     email= models.EmailField(default="email@email.com",unique=True,null=True)
     last_name = models.CharField(max_length=30, blank=True)
     photo = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
+    banner = models.ImageField(upload_to=banner_directory_path, blank=True, null=True)
     description = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
