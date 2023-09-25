@@ -41,7 +41,7 @@
         <div class="profile-infos">
             <div class="profile-name">
                 <div class="profile-label">
-                    Nome:
+                    Nome
                 </div>
                 <div class="profile-frst">
                     {% if user_profile.first_name %}
@@ -53,7 +53,7 @@
             </div>
             <div class="profile-name">
                 <div class="profile-label">
-                    Sobrenome:
+                    Sobrenome
                 </div>
                 <div class="profile-last">
                     {% if user_profile.last_name %}
@@ -65,8 +65,18 @@
             </div>
             
             <div class="profile-desc">
-                desc
+                <div class="profile-label">
+                    Descrição
+                </div>
+                <div class="profile-description">
+                    {% if user_profile.description %}
+                        {{ user_profile.description }}
+                    {% else %}
+                        Nenhuma descrição disponível
+                    {% endif %}
+                </div>
             </div>
+            
 
         </div>
 
