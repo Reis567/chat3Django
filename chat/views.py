@@ -92,14 +92,20 @@ def room(request, slug):
 @login_required
 def user_profile(request):
     user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+    
+    return render(request, 'profile_temps/profile.html', {'user_profile': user_profile})
 
+@login_required
+def edit_user_profile(request):
+    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
         if form.is_valid():
             try:
                 form.save()
                 messages.success(request, 'Perfil atualizado com sucesso.')
-                return redirect('user_profile')
+                return redirect('edit_user_profile')
             except IntegrityError:
                 messages.error(request, 'Este endereço de e-mail já está em uso. Por favor, escolha outro endereço de e-mail.')
         else:
@@ -107,4 +113,4 @@ def user_profile(request):
     else:
         form = UserProfileForm(instance=user_profile)
 
-    return render(request, 'profile.html', {'form': form, 'user_profile': user_profile})
+    return render(request, 'profile_temps/edit_profile.html', {'form': form, 'user_profile': user_profile})
