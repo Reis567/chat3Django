@@ -20,6 +20,7 @@ urlpatterns = [
     path('rooms/', views.rooms, name='rooms'),
     path('room/<str:slug>/',views.room, name='room'),
     path('profile/', views.user_profile, name='user_profile'),
+    path('profile/edit/', views.edit_user_profile, name='edit_user_profile'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
