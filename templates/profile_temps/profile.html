@@ -40,13 +40,30 @@
         </div>
         <div class="profile-infos">
             <div class="profile-name">
-                <div class="profile-frst">
-                    nome
+                <div class="profile-label">
+                    Nome:
                 </div>
-                <div class="profile-last">
-                    sobrenome
+                <div class="profile-frst">
+                    {% if user_profile.first_name %}
+                        {{ user_profile.first_name }}
+                    {% else %}
+                        Seu nome
+                    {% endif %}
                 </div>
             </div>
+            <div class="profile-name">
+                <div class="profile-label">
+                    Sobrenome:
+                </div>
+                <div class="profile-last">
+                    {% if user_profile.last_name %}
+                        {{ user_profile.last_name }}
+                    {% else %}
+                        Seu sobrenome
+                    {% endif %}
+                </div>
+            </div>
+            
             <div class="profile-desc">
                 desc
             </div>
