@@ -741,3 +741,12 @@ nav .nav-auth{
     top: 0;
     border-radius: 15px;
 }
+
+.profile-user{
+    position: absolute;
+    top: 47%;
+    left: 4.5%;
+}
+.profile-user h1{
+    font-size: 30px;
+}
