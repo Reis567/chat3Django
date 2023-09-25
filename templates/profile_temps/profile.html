@@ -44,11 +44,14 @@
                     Nome
                 </div>
                 <div class="profile-frst">
+                    <h3>
                     {% if user_profile.first_name %}
                         {{ user_profile.first_name }}
                     {% else %}
                         Seu nome
                     {% endif %}
+                    </h3>
+                    
                 </div>
             </div>
             <div class="profile-name">
@@ -56,11 +59,14 @@
                     Sobrenome
                 </div>
                 <div class="profile-last">
+                    <h3>
                     {% if user_profile.last_name %}
                         {{ user_profile.last_name }}
                     {% else %}
                         Seu sobrenome
                     {% endif %}
+                    </h3>
+                    
                 </div>
             </div>
             
@@ -69,11 +75,14 @@
                     Descrição
                 </div>
                 <div class="profile-description">
+                    <h3>
                     {% if user_profile.description %}
                         {{ user_profile.description }}
                     {% else %}
                         Nenhuma descrição disponível
                     {% endif %}
+                    </h3>
+                    
                 </div>
             </div>
             
