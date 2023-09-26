@@ -3,6 +3,40 @@
 {% block title %}{{request.user}}(edit){% endblock %}
 
 {% block content %}
-
-
+<section class="edit">
+    <div class="edit-content">
+        <h1>Edit Profile</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="{{ form.first_name.id_for_label }}">First Name:</label>
+                {{ form.first_name }}
+            </div>
+    
+            <div class="form-group">
+                <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+                {{ form.last_name }}
+            </div>
+    
+            <div class="form-group">
+                <label for="{{ form.photo.id_for_label }}">Profile Photo:</label>
+                {{ form.photo }}
+            </div>
+    
+            <div class="form-group">
+                <label for="{{ form.banner.id_for_label }}">Banner Image:</label>
+                {{ form.banner }}
+            </div>
+    
+            <div class="form-group">
+                <label for="{{ form.description.id_for_label }}">Description:</label>
+                {{ form.description }}
+            </div>
+    
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    
+</section>
 {% endblock %}

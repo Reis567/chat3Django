@@ -6,7 +6,7 @@ from PIL import Image
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['user', 'first_name', 'last_name', 'photo', 'description']
+        fields = ['first_name', 'last_name', 'photo', 'description']
 
     def clean_photo(self):
         photo = self.cleaned_data.get('photo')

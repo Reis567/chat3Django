@@ -777,6 +777,10 @@ nav .nav-auth{
 
 
 .prof-edit-btn{
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     top: 47%;
     right: 6%;
@@ -789,12 +793,7 @@ nav .nav-auth{
     
 
 }
-.prof-edit-btn button{
-    display: flex;
-    font-weight: bolder;
-    align-items: center;
-    cursor: pointer;
-}
+
 .prof-edit-btn i{
     margin-right: 10px;
 }
@@ -877,4 +876,14 @@ nav .nav-auth{
 
   .profile-email .profile-label{
     width: 90%;
+  }
+
+
+  .edit{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }

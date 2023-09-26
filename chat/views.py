@@ -98,16 +98,15 @@ def user_profile(request):
 @login_required
 def edit_user_profile(request):
     user_profile, created = UserProfile.objects.get_or_create(user=request.user)
-    
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
         if form.is_valid():
-            try:
-                form.save()
-                messages.success(request, 'Perfil atualizado com sucesso.')
-                return redirect('edit_user_profile')
-            except IntegrityError:
-                messages.error(request, 'Este endereço de e-mail já está em uso. Por favor, escolha outro endereço de e-mail.')
+            # Defina o campo 'user' manualmente
+            user_profile.user = request.user
+            form.save()
+            messages.success(request, 'Perfil atualizado com sucesso.')
+            return redirect('edit_user_profile')
         else:
             messages.error(request, 'Por favor, corrija os erros no formulário.')
     else:
