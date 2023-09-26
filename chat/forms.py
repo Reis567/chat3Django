@@ -24,4 +24,22 @@ class UserProfileForm(forms.ModelForm):
                 raise ValidationError("O banner deve ter no mínimo 1000x200 pixels.")
         return banner
     
-    
+    def save(self, commit=True):
+            user_profile = super().save(commit=False)
+
+            # Redimensiona a imagem do banner para 1000x200 pixels
+            if user_profile.banner:
+                banner_image = Image.open(user_profile.banner)
+                banner_image = banner_image.resize((1000, 200), Image.ANTIALIAS)
+                banner_image.save(user_profile.banner.path)
+
+            # Redimensiona a imagem de perfil para 500x500 pixels
+            if user_profile.photo:
+                profile_image = Image.open(user_profile.photo)
+                profile_image = profile_image.resize((500, 500), Image.ANTIALIAS)
+                profile_image.save(user_profile.photo.path)
+
+            if commit:
+                user_profile.save()
+
+            return user_profile
