@@ -753,17 +753,25 @@ nav .nav-auth{
 
 .profile-infos{
     position: absolute;
-    bottom: 8%;
+    bottom: 3%;
+    right: 2%;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .profile-name{
     display: flex;
     flex-direction: column;
+    width: 40%;
+}
+.profile-desc{
+    width: 40%;
 }
 .profile-name .profile-frst{
+    margin-bottom: 20px;
+}
+.profile-name .profile-last{
     margin-bottom: 20px;
 }
 
@@ -796,3 +804,41 @@ nav .nav-auth{
     cursor: pointer;
     border: 3px solid var(--prim-stgr);
 }
+.profile-description{
+    width: 110%;
+    height: 200px;
+    padding: 10px;
+    background-color: var(--sec-stgr);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: .3s;
+    box-shadow: inset 0 0 1px 1px var(--black);
+    overflow-y: scroll;
+}
+
+.profile-description::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.profile-description::-webkit-scrollbar-thumb {
+    background-color: var(--sec-cl);
+    border-radius: 5px;
+  }
+  .profile-description {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sec-stgr); 
+  }
+
+  .profile-label{
+    width: 70%;
+    margin-bottom: 5px;
+    padding-left: 3px;
+    border-left: 2px solid var(--sec-cl);
+    border-bottom: 3px solid var(--sec-cl);
+    font-size: 16px;
+
+  }
+
+  .profile-desc .profile-label{
+    width: 110%;
+  }

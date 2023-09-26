@@ -66,6 +66,19 @@
                     </h3>
                     
                 </div>
+                <div class="profile-label">
+                    E-mail
+                </div>
+                <div class="profile-last">
+                    <h3>
+                    {% if user_profile.email %}
+                        {{ user_profile.email }}
+                    {% else %}
+                        Seu E-mail
+                    {% endif %}
+                    </h3>
+                    
+                </div>
             </div>
             
             <div class="profile-desc">
