@@ -32,15 +32,18 @@ class UserProfileForm(forms.ModelForm):
             banner_image = Image.open(user_profile.banner)
             novo_tamanho=(1000,200)
             banner_image = banner_image.resize(novo_tamanho)
+            print(f'banner size :{banner_image.size}')
             banner_image.save(user_profile.banner.path)
 
         # Redimensiona a imagem de perfil para 500x500 pixels
         if user_profile.photo:
             profile_image = Image.open(user_profile.photo)
-            novo_tamanho=(500,500)
+            novo_tamanho=(180,180)
             profile_image = profile_image.resize(novo_tamanho)
+            print(f'photo size :{profile_image.size}' )
             profile_image.save(user_profile.photo.path)
 
-        user_profile.save()
+        if commit:
+            user_profile.save()
 
         return user_profile
