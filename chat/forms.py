@@ -6,7 +6,7 @@ from PIL import Image
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'photo', 'description']
+        fields = ['first_name', 'last_name', 'photo','banner', 'description']
 
     def clean_photo(self):
         photo = self.cleaned_data.get('photo')
@@ -31,17 +31,16 @@ class UserProfileForm(forms.ModelForm):
         if user_profile.banner:
             banner_image = Image.open(user_profile.banner)
             novo_tamanho=(1000,200)
-            banner_image = banner_image.resize(novo_tamanho,Image.LANCZOS)
+            banner_image = banner_image.resize(novo_tamanho)
             banner_image.save(user_profile.banner.path)
 
         # Redimensiona a imagem de perfil para 500x500 pixels
         if user_profile.photo:
             profile_image = Image.open(user_profile.photo)
             novo_tamanho=(500,500)
-            profile_image = profile_image.resize(novo_tamanho, Image.LANCZOS)
+            profile_image = profile_image.resize(novo_tamanho)
             profile_image.save(user_profile.photo.path)
 
-        if commit:
-            user_profile.save()
+        user_profile.save()
 
         return user_profile
