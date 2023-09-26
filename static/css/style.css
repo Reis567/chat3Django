@@ -734,6 +734,8 @@ nav .nav-auth{
     left: 1%;
     top: 16%;
     border-radius: 50%;
+    background: var(--sec-cl);
+    padding: 3px;
 
 }
 .profile-banner img{
@@ -746,8 +748,8 @@ nav .nav-auth{
 
 .profile-user{
     position: absolute;
-    top: 47%;
-    left: 4.5%;
+    top: 45%;
+    left: 5.6%;
 }
 .profile-user h1{
     font-size: 30px;
