@@ -757,7 +757,7 @@ nav .nav-auth{
 
 .profile-infos{
     position: absolute;
-    bottom: 2%;
+    bottom: 4.5%;
     right: 2%;
     display: flex;
     width: 100%;
@@ -786,8 +786,8 @@ nav .nav-auth{
     align-items: center;
     cursor: pointer;
     position: absolute;
-    top: 47%;
-    right: 6%;
+    top: 38%;
+    right: 4%;
     padding: 10px;
     background: var(--sec-cl);
     border: 3px solid transparent;
@@ -833,7 +833,7 @@ nav .nav-auth{
   }
 
   .profile-label{
-    width: 80%;
+    width: 78%;
     margin-bottom: 5px;
     padding-left: 3px;
     border-left: 2px solid var(--sec-cl);
@@ -856,7 +856,7 @@ nav .nav-auth{
   }
 
   .profile-last{
-    width: 80%;
+    width: 90%;
     padding: 2px;
     background: var(--sec-stgr);
     border: 3px solid transparent;
@@ -868,7 +868,7 @@ nav .nav-auth{
   }
 
   .profile-email{
-    width: 90%;
+    width: 100%;
     padding: 2px;
     background: var(--sec-stgr);
     border: 3px solid transparent;
