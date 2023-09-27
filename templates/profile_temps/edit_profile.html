@@ -8,31 +8,39 @@
         <h1>Edit Profile</h1>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            
-            <div class="form-group">
-                <label for="{{ form.first_name.id_for_label }}">First Name:</label>
-                {{ form.first_name }}
-            </div>
+            <div class="form-content">
+
+                <div class="form-group1">
+
+                    <label for="{{ form.first_name.id_for_label }}">First Name:</label>
+                    {{ form.first_name }}
+                    
+                    <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+                    {{ form.last_name }}
     
-            <div class="form-group">
-                <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
-                {{ form.last_name }}
-            </div>
+                    <label for="{{ form.email.id_for_label }}">Email:</label>
+                    {{ form.email }}
     
-            <div class="form-group">
-                <label for="{{ form.photo.id_for_label }}">Profile Photo:</label>
-                {{ form.photo }}
-            </div>
+                </div>
+        
     
-            <div class="form-group">
-                <label for="{{ form.banner.id_for_label }}">Banner Image:</label>
-                {{ form.banner }}
-            </div>
+                <div class="form-group2">
+                    <label for="{{ form.description.id_for_label }}">Description:</label>
+                    {{ form.description }}
+                </div>
     
-            <div class="form-group">
-                <label for="{{ form.description.id_for_label }}">Description:</label>
-                {{ form.description }}
+                <div class="form-group3">
+    
+                    <label for="{{ form.photo.id_for_label }}">Profile Photo:</label>
+                    {{ form.photo }}
+    
+                    <label for="{{ form.banner.id_for_label }}">Banner Image:</label>
+                    {{ form.banner }}
+    
+                </div>
+                
             </div>
+
     
             <button type="submit">Save</button>
         </form>
