@@ -700,6 +700,10 @@ nav .nav-auth{
 
 .messages-ul li{
     font-size: 13px;
+    color: var(--black)
+}
+.errorlist li{
+    font-size: 13px;
     color: red;
 }
 
