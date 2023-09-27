@@ -992,10 +992,51 @@ nav .nav-auth{
 
 
   .form-group3{
+    font-size: 13px;
     width: 30%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-right: 30px;
+  }
+  .form-group3 .perfil{
+    margin-bottom: 10px;
+    display: flex;
+    padding: 10px;
+    border: 2px solid var(--sec-cl);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-group3 .capa{
+    display: flex;
+    padding: 10px;
+    border: 2px solid var(--sec-cl);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .form-group3 a{
+    font-size: 8px;
+    color: var(--black);
+  }
+
+  .form-group3 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilize o input de imagem */
+.form-group3 input[type="file"] {
+    margin-bottom: 10px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--sec-cl);
+    font-weight: bold;
+}
 
   .form-single-input{
     width: 80%;

@@ -7,7 +7,7 @@
     <div class="edit-content">
         
         <form method="post" enctype="multipart/form-data">
-            <h1>Edit Profile</h1>
+            <h1>Editar Perfil</h1>
             {% csrf_token %}
             <div class="form-content">
 
@@ -40,11 +40,17 @@
     
                 <div class="form-group3">
     
-                    <label for="{{ form.photo.id_for_label }}">Profile Photo:</label>
-                    {{ form.photo }}
+                    <div class="perfil">
+                        <label for="{{ form.photo.id_for_label }}">Foto de perfil</label>
+                        {{ form.photo }}
+                    </div>
+                    
     
-                    <label for="{{ form.banner.id_for_label }}">Banner Image:</label>
-                    {{ form.banner }}
+                    <div class="capa">
+                        <label for="{{ form.banner.id_for_label }}">Foto de capa</label>
+                        {{ form.banner }}
+                    </div>
+                    
     
                 </div>
 
