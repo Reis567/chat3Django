@@ -15,13 +15,13 @@
 
                     <div class="form-single-input">
                         {{ form.first_name }}
-                        <label for="{{ form.first_name.id_for_label }}">First Name</label>
+                        <label for="{{ form.first_name.id_for_label }}">Nome</label>
                     </div>
                     
                     
                     <div class="form-single-input">
                         {{ form.last_name }}
-                        <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+                        <label for="{{ form.last_name.id_for_label }}">Sobrenome</label>
                     </div>
                     
                     <div class="form-single-input">
@@ -34,7 +34,7 @@
         
     
                 <div class="form-group2">
-                    <label for="{{ form.description.id_for_label }}">Description</label>
+                    <label for="{{ form.description.id_for_label }}">Descrição</label>
                     {{ form.description }}
                 </div>
     
@@ -60,14 +60,14 @@
             <button type="submit">Salvar</button>
 
             {% if messages %}
-        <div class="messages">
-            <ul class="messages-ul">
-                {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+            <div class="messages">
+                <ul class="messages-ul">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </form>
     </div>
     
