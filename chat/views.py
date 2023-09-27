@@ -97,19 +97,31 @@ def user_profile(request):
 
 @login_required
 def edit_user_profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
-
+    try:
+        user_profile = UserProfile.objects.get(user=request.user)
+    except UserProfile.DoesNotExist:
+        # Lidar com o caso em que o perfil do usuário não existe
+        messages.error(request, 'Seu perfil de usuário não existe.')
+        return redirect('home')  # Redirecionar para a página inicial ou outra página apropriada
+    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
-        if form.is_valid():
-            # Defina o campo 'user' manualmente
-            user_profile.user = request.user
-            form.save()
-            messages.success(request, 'Perfil atualizado com sucesso.')
-            return redirect('edit_user_profile')
-        else:
-            messages.error(request, 'Por favor, corrija os erros no formulário.')
+        try:
+            if form.is_valid():
+                user_profile.user = request.user
+                form.save()
+                messages.success(request, 'Perfil atualizado com sucesso.')
+                return redirect('edit_user_profile')
+            else:
+                messages.error(request, 'Por favor, corrija os erros no formulário.')
+        except Exception as e:
+            messages.error(request, f'Erro ao salvar perfil: {str(e)}')
     else:
         form = UserProfileForm(instance=user_profile)
 
-    return render(request, 'profile_temps/edit_profile.html', {'form': form, 'user_profile': user_profile})
+    return render(request,
+                  'profile_temps/edit_profile.html',
+                  {
+                    'form': form,
+                    'user_profile': user_profile
+                })
