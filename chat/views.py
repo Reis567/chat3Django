@@ -111,7 +111,7 @@ def edit_user_profile(request):
                 user_profile.user = request.user
                 form.save()
                 messages.success(request, 'Perfil atualizado com sucesso.')
-                return redirect('edit_user_profile')
+                return redirect('user_profile')
             else:
                 messages.error(request, 'Por favor, corrija os erros no formulário.')
         except Exception as e:

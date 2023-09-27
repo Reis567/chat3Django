@@ -739,6 +739,8 @@ nav .nav-auth{
 
 }
 .profile-banner img{
+    width: 1000px;
+    height: 200px;
     position: absolute;
     width: 100%;
     left: 0;
