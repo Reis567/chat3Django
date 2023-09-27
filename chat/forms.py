@@ -2,6 +2,8 @@ from django import forms
 from .models import UserProfile
 from django.core.exceptions import ValidationError
 from PIL import Image
+import re
+
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
@@ -27,6 +29,11 @@ class UserProfileForm(forms.ModelForm):
             if not banner.name.endswith(('.jpg', '.jpeg', '.png', '.gif')):
                 raise ValidationError("Formato de imagem não suportado. Use JPG, JPEG, PNG ou GIF.")
         return banner
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not re.match(r'^[\w\.-]+@[\w\.-]+\.\w+$', email):
+            raise ValidationError("Formato de email inválido. Use um formato válido de email.")
+        return email
     
     def save(self, commit=True):
         user_profile = super().save(commit=False)
