@@ -16,7 +16,7 @@ class UserProfileForm(forms.ModelForm):
             image = Image.open(photo)
             if image.width < 500 or image.height < 500:
                 raise ValidationError("A imagem de perfil deve ter no mínimo 500x500 pixels.")
-            if not photo.name.endswith(('.jpg', '.jpeg', '.png', '.gif')):
+            if not photo.name.endswith(('.jpg', '.jpeg', '.png', '.gif','.JPG', '.JPEG', '.PNG', '.GIF',)):
                 raise ValidationError("Formato de imagem não suportado. Use JPG, JPEG, PNG ou GIF.")
         return photo
 
@@ -26,7 +26,7 @@ class UserProfileForm(forms.ModelForm):
             image = Image.open(banner)
             if image.width < 1000 or image.height < 200:
                 raise ValidationError("O banner deve ter no mínimo 1000x200 pixels.")
-            if not banner.name.endswith(('.jpg', '.jpeg', '.png', '.gif')):
+            if not banner.name.endswith(('.jpg', '.jpeg', '.png', '.gif','.JPG', '.JPEG', '.PNG', '.GIF',)):
                 raise ValidationError("Formato de imagem não suportado. Use JPG, JPEG, PNG ou GIF.")
         return banner
     def clean_email(self):
