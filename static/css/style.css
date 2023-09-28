@@ -40,6 +40,15 @@ header nav{
 header a{
     color: var(--white);
     transition: .5s;
+    display: block;
+    padding: 1rem;
+}
+
+.welcome-user{
+    color: var(--white);
+    transition: .5s;
+    display: block;
+    padding: 1rem;
 }
 header a:hover {
     color: var(--sec-cl);
@@ -60,6 +69,13 @@ nav .nav-auth{
 }
 
 .user-is-auth{
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.unlog-user{
     padding-left: 60px;
     display: flex;
     justify-content: space-around;
@@ -1090,4 +1106,20 @@ nav .nav-auth{
 .form-single-input input:valid ~ label{
     transform: translateY(-49px);
     font-size: 12px;
+}
+
+
+.label-menu,
+.checkbox{
+    display: none;
+}
+
+@media (max-width : 600px) {
+    .nav-auth{
+        display: none;
+    }
+    .label-menu{
+        display: flex;
+        align-items: center;
+    }
 }

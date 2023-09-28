@@ -13,8 +13,18 @@
     <body>
         <header>
             <h1>
-                <a href="{% url 'home' %}">MaricáChat</a></h1>
+                <a href="{% url 'home' %}">
+                    MaricáChat
+                </a>
+            </h1>
+
             <nav>
+                <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+                
+                <label for="checkbox" class="label-menu">
+                    Menu
+                    <span class="hamburguer"></span>
+                </label>
                 
         
                 <div class="nav-auth">
@@ -46,20 +56,22 @@
                         
                        
                     {% else %}
-                        <!-- Se o usuário não estiver logado, mostre as opções de login e registro -->
-                        <h3>
-                            Bem vindo(a)
-                        </h3>
-                        <h3>
-                            <a href="{% url 'login' %}">
-                                <i class="icon-h fa-solid fa-door-open"></i> 
-                                 Login</a>
-                        </h3>
+                        <div class="unlog-user">
+                            <h3 class="welcome-user">
+                                Bem vindo(a)
+                            </h3>
+                            <h3>
+                                <a href="{% url 'login' %}">
+                                    <i class="icon-h fa-solid fa-door-open"></i> 
+                                     Login</a>
+                            </h3>
+                            
+                            <h3>
+                                <a href="{% url 'register' %}">
+                                    <i class="icon-h fa-solid fa-ghost"></i>  Criar conta</a>
+                            </h3>
+                        </div>
                         
-                        <h3>
-                            <a href="{% url 'register' %}">
-                                <i class="icon-h fa-solid fa-ghost"></i>  Criar conta</a>
-                        </h3>
                         
                     {% endif %}
                 </div>
