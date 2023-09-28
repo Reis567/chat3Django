@@ -1114,13 +1114,39 @@ nav .nav-auth{
     display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 849px) {
     .user-is-auth,
     .unlog-user{
-        display: none;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 4.0625rem;
+        text-align: center;
+        background: var(--prim-stgr);
+        width: 100%;
+        height: calc(100vh - 4.0625rem);
+        z-index: 1;
     }
     .label-menu{
         display: flex;
         align-items: center;
+        gap: 0.5rem;
+        color: var(--white);
+        padding-block: 1rem;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .hamburguer{
+        border-top: 0.125rem solid;
+    }
+    .hamburguer::before,
+    .hamburguer::after{
+        content: "";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
     }
 }
