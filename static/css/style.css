@@ -1108,8 +1108,11 @@ nav .nav-auth{
     font-size: 12px;
 }
 
+.label-menu{
+    display: none;
+}
 
-.label-menu,
+
 .checkbox{
     display: none;
 }
@@ -1124,8 +1127,19 @@ nav .nav-auth{
         text-align: center;
         background: var(--prim-stgr);
         width: 100%;
-        height: calc(100vh - 4.0625rem);
+        height: 0;
         z-index: 1;
+        margin-left: 0;
+        padding-left: 0;
+        transition: 0.5s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .user-is-auth a,
+    .unlog-user a{
+        padding: 1rem 0;
+        border-bottom: 0.0625rem solid var(--sec-stgr);
     }
     .label-menu{
         display: flex;
@@ -1148,5 +1162,15 @@ nav .nav-auth{
         height: 0.125rem;
         background: currentColor;
         margin-top: 0.3125rem;
+    }
+    .checkbox:checked ~ .nav-auth .user-is-auth{
+        visibility: visible;
+        height: calc(100vh - 4.0625rem);
+        overflow-y: auto;
+    }
+    .checkbox:checked ~ .nav-auth .unlog-user{
+        visibility: visible;
+        height: calc(100vh - 4.0625rem);
+        overflow-y: auto;
     }
 }
