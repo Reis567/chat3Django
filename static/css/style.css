@@ -1114,8 +1114,9 @@ nav .nav-auth{
     display: none;
 }
 
-@media (max-width : 600px) {
-    .nav-auth{
+@media (max-width: 600px) {
+    .user-is-auth,
+    .unlog-user{
         display: none;
     }
     .label-menu{
