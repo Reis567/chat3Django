@@ -1162,6 +1162,8 @@ nav .nav-auth{
         height: 0.125rem;
         background: currentColor;
         margin-top: 0.3125rem;
+        position: relative;
+        transform: 0.3s;
     }
     .checkbox:checked ~ .nav-auth .user-is-auth{
         visibility: visible;
@@ -1172,5 +1174,15 @@ nav .nav-auth{
         visibility: visible;
         height: calc(100vh - 4.0625rem);
         overflow-y: auto;
+    }
+    .checkbox:checked ~ .label-menu .hamburguer{
+        border-top-color: transparent;
+    }
+    .checkbox:checked ~ .label-menu .hamburguer::before{
+        transform: rotate(135deg);
+    }
+    .checkbox:checked ~ .label-menu .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -0.4375rem;
     }
 }
