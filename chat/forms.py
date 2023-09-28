@@ -24,8 +24,8 @@ class UserProfileForm(forms.ModelForm):
         banner = self.cleaned_data.get('banner')
         if banner:
             image = Image.open(banner)
-            if image.width < 1000 or image.height < 200:
-                raise ValidationError("O banner deve ter no mínimo 1000x200 pixels.")
+            if image.width < 800 or image.height < 200:
+                raise ValidationError("O banner deve ter no mínimo 800x200 pixels.")
             if not banner.name.endswith(('.jpg', '.jpeg', '.png', '.gif','.JPG', '.JPEG', '.PNG', '.GIF',)):
                 raise ValidationError("Formato de imagem não suportado. Use JPG, JPEG, PNG ou GIF.")
         return banner
@@ -41,7 +41,7 @@ class UserProfileForm(forms.ModelForm):
         # Redimensiona a imagem do banner para 1000x200 pixels
         if user_profile.banner:
             banner_image = Image.open(user_profile.banner)
-            novo_tamanho=(1000,200)
+            novo_tamanho=(800,200)
             banner_image = banner_image.resize(novo_tamanho)
             print(f'banner size :{banner_image.size}')
             banner_image.save(user_profile.banner.path)
