@@ -1260,10 +1260,30 @@ nav .nav-auth{
         margin-right: 15px;
     }
 
+    .home-buttons .login-home-button{
+        margin-right: 15px;
+    }
+    .home-buttons .register-home-button{
+        margin-right: 0px;
+    }
+
     .profile-button button{
         width: 40%;
     }
     .profile-button span i{
+        font-size: 40px;
+    }
+
+    .login-home-button button{
+        width: 40%;
+    }
+    .login-home-button span i{
+        font-size: 40px;
+    }
+    .register-home-button button{
+        width: 40%;
+    }
+    .register-home-button span i{
         font-size: 40px;
     }
 
