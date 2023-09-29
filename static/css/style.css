@@ -1242,6 +1242,39 @@ nav .nav-auth{
         top: -0.4375rem;
     }
 
-    
+    /*Aqui começa a estilização da home para dispositivo mobile*/
+
+    .home-content{
+        width: 90%;
+        height: 60%;
+    }
+    .home-buttons{
+        height: 40%;
+        width: 90%;
+        padding: 2px;
+    }
+    .home-buttons .profile-button{
+        margin-left: 15px;
+    }
+    .home-buttons .chat-button{
+        margin-right: 15px;
+    }
+
+    .profile-button button{
+        width: 40%;
+    }
+    .profile-button span i{
+        font-size: 40px;
+    }
+
+    .chat-button button{
+        width: 40%;
+    }
+    .chat-button span i{
+        font-size: 40px;
+    }
+    .logout{
+        font-size: 20px;
+    }
 
 }
