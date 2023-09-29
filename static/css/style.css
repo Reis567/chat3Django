@@ -771,7 +771,7 @@ nav .nav-auth{
 .profile-user{
     position: absolute;
     top: 45%;
-    left: 5.6%;
+    left: 4.4%;
 }
 .profile-user h1{
     font-size: 30px;
@@ -1066,6 +1066,7 @@ nav .nav-auth{
     font-weight: bold;
 }
 
+
   .form-single-input{
     width: 80%;
     margin: 15px 0;
@@ -1108,6 +1109,58 @@ nav .nav-auth{
     font-size: 12px;
 }
 
+
+
+
+.form-input-email{
+    width: 80%;
+    margin: 15px 0;
+    position: relative;
+}
+
+.form-input-email label{
+    font-size: 16px;
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+    color: var(--black);
+    cursor: text;
+    transition: 0.5s ease-in-out;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.form-input-email input{
+    width: 80%;
+    padding: 5px;
+    color: var(--black);
+    border: 0;
+    border-bottom: 2px solid var(--prim-stgr);
+    background: var(--sec-stgr);
+    outline: 0;
+    padding: 10px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: inset 0 0 1px 1px var(--black);
+}
+
+.form-input-email input:focus,
+.form-input-email input:valid{
+    border-bottom: 2px solid var(--sec-cl);
+    transition: .1s;
+}
+
+.form-input-email input:focus ~ label,
+.form-input-email input:valid ~ label{
+    transform: translateY(-49px);
+    font-size: 12px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+
 .label-menu{
     display: none;
 }
@@ -1118,12 +1171,15 @@ nav .nav-auth{
 }
 
 @media (max-width: 849px) {
+    .site-title{
+        font-size: 20px;
+    }
     .user-is-auth,
     .unlog-user{
         display: block;
         position: absolute;
         left: 0;
-        top: 4.0625rem;
+        top: 3.8125rem;
         text-align: center;
         background: var(--prim-stgr);
         width: 100%;
@@ -1148,7 +1204,7 @@ nav .nav-auth{
         color: var(--white);
         padding-block: 1rem;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bolder;
     }
     .hamburguer{
@@ -1185,4 +1241,7 @@ nav .nav-auth{
         transform: rotate(-135deg);
         top: -0.4375rem;
     }
+
+    
+
 }
