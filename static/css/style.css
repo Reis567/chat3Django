@@ -1297,4 +1297,14 @@ nav .nav-auth{
         font-size: 20px;
     }
 
+    /*Aqui começa a estilização do login/register para dispositivo mobile*/
+
+    .login-content{
+        width: 80%;
+        height: 40%;
+    }
+    .register-content{
+        width: 80%;
+        height: 50%;
+    }
 }
