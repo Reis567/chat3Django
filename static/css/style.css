@@ -616,6 +616,7 @@ nav .nav-auth{
     outline: 0;
 }
 
+
 .single-input input:focus,
 .single-input input:valid{
     border-bottom: 2px solid var(--sec-cl);
@@ -624,6 +625,7 @@ nav .nav-auth{
 
 .single-input input:focus ~ label,
 .single-input input:valid ~ label{
+    
     transform: translateY(-24px);
     font-size: 12px;
 }
@@ -1306,5 +1308,10 @@ nav .nav-auth{
     .register-content{
         width: 80%;
         height: 50%;
+    }
+    .logout-content{
+        width: 90%;
+        height: 60%;
+        text-align: center;
     }
 }

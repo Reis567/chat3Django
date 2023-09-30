@@ -31,7 +31,7 @@
                 <div class="nav-auth">
                     {% if user.is_authenticated %}
                         <!-- Se o usuário estiver logado, mostre a opção de logout -->
-                        <div class="user-is-auth">
+                        <div id="user-is-auth" class="user-is-auth">
                             <h3>
                                 <a href="{% url 'home' %}">
                                     <i class="icon-h fa-solid fa-house"></i>  Início</a>
@@ -57,7 +57,7 @@
                         
                        
                     {% else %}
-                        <div class="unlog-user">
+                        <div id="unlog-user" class="unlog-user">
                             <h3 class="welcome-user">
                                 Bem vindo(a)
                             </h3>
@@ -83,8 +83,8 @@
             {% block content %}{% endblock %}
     
         <footer class="footer">
-            <p><a href="https://github.com/reis567" target="_blank">Reis567</a> &copy; {{ year }}.</p>
-        </footer>
+            <p><a href="https://github.com/reis567" target="_blank">Reis567</a> &copy;.</p>
+        </footer>        
     </body>
     </html>
     
