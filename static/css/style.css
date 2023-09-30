@@ -1350,4 +1350,10 @@ nav .nav-auth{
     .chat_room-actions{
         width: 90%;
     }
+    .chat_room-balao-eu{
+        font-size: 18px;
+    }
+    .chat_room-balao-ele{
+        font-size: 18px;
+    }
 }
