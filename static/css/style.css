@@ -1341,4 +1341,13 @@ nav .nav-auth{
         font-size: 12px;
         margin-top: 10px;
     }
+    .chat_room-content{
+        width: 90%;
+    }
+    .chat_room-messages{
+        width: 90%;
+    }
+    .chat_room-actions{
+        width: 90%;
+    }
 }
