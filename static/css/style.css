@@ -1163,12 +1163,9 @@ nav .nav-auth{
 
 
 
-.label-menu{
-    display: none;
-}
 
 
-.checkbox{
+.btn-menu{
     display: none;
 }
 
@@ -1199,7 +1196,10 @@ nav .nav-auth{
         padding: 1rem 0;
         border-bottom: 0.0625rem solid var(--sec-stgr);
     }
-    .label-menu{
+    .btn-menu{
+        background: none;
+        border: none;
+        font: inherit;
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -1223,25 +1223,28 @@ nav .nav-auth{
         position: relative;
         transform: 0.3s;
     }
-    .checkbox:checked ~ .nav-auth .user-is-auth{
+    .nav.active .nav-auth .user-is-auth{
         visibility: visible;
         height: calc(100vh - 4.0625rem);
         overflow-y: auto;
     }
-    .checkbox:checked ~ .nav-auth .unlog-user{
+    .nav.active  .nav-auth .unlog-user{
         visibility: visible;
         height: calc(100vh - 4.0625rem);
         overflow-y: auto;
     }
-    .checkbox:checked ~ .label-menu .hamburguer{
+    .nav.active  .label-menu .hamburguer{
         border-top-color: transparent;
     }
-    .checkbox:checked ~ .label-menu .hamburguer::before{
+    .nav.active  .label-menu .hamburguer::before{
         transform: rotate(135deg);
     }
-    .checkbox:checked ~ .label-menu .hamburguer::after{
+    .nav.active  .label-menu .hamburguer::after{
         transform: rotate(-135deg);
         top: -0.4375rem;
+    }
+    .zindex{
+        z-index: -1;
     }
 
     /*Aqui começa a estilização da home para dispositivo mobile*/

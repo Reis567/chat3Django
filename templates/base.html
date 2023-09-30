@@ -19,19 +19,19 @@
                 </a>
             </h1>
 
-            <nav>
-                <input type="checkbox" name="checkbox" id="checkbox" class="checkbox"/>
-                
-                <label for="checkbox" class="label-menu">
+            <nav class="nav"> 
+                <button class="btn-menu" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                     Menu
-                    <span class="hamburguer"></span>
-                </label>
+                    <span class="hamburguer">
+
+                    </span>
+                </button>
                 
         
                 <div class="nav-auth">
                     {% if user.is_authenticated %}
                         <!-- Se o usuário estiver logado, mostre a opção de logout -->
-                        <div id="user-is-auth" class="user-is-auth">
+                        <div id="user-is-auth" class="user-is-auth" role="menu">
                             <h3>
                                 <a href="{% url 'home' %}">
                                     <i class="icon-h fa-solid fa-house"></i>  Início</a>
@@ -57,7 +57,7 @@
                         
                        
                     {% else %}
-                        <div id="unlog-user" class="unlog-user">
+                        <div id="unlog-user" class="unlog-user"  role="menu">
                             <h3 class="welcome-user">
                                 Bem vindo(a)
                             </h3>
@@ -84,7 +84,38 @@
     
         <footer class="footer">
             <p><a href="https://github.com/reis567" target="_blank">Reis567</a> &copy;.</p>
-        </footer>        
+        </footer>
+        
+        <script defer>
+            const nav = document.querySelector('.nav');
+            const btnMenu = document.querySelector('.btn-menu');
+            const userIsAuth = document.querySelector('.user-is-auth');
+            const unlogUser = document.querySelector('.unlog-user');
+            const loginContent = document.querySelector('.login-content');
+            const registerContent = document.querySelector('.register-content');
+            const profileContent = document.querySelector('.profile-content');
+
+            function handleButtonClick(event){
+                if(event.type === "touchstart")event.preventDefault();
+                nav.classList.toggle("active");
+                loginContent.classList.toggle('zindex');
+            }
+            function handleButtonClick2(event){
+                registerContent.classList.toggle('zindex');
+            }
+            function handleButtonClick3(event){
+                profileContent.classList.toggle('zindex');
+            }
+
+            btnMenu.addEventListener('click', handleButtonClick);
+            btnMenu.addEventListener('touchstart', handleButtonClick);
+
+            btnMenu.addEventListener('click', handleButtonClick2);
+            btnMenu.addEventListener('touchstart', handleButtonClick2);
+
+            btnMenu.addEventListener('click', handleButtonClick3);
+            btnMenu.addEventListener('touchstart', handleButtonClick3);
+        </script>       
     </body>
     </html>
     
