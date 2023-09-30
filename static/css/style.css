@@ -1314,4 +1314,31 @@ nav .nav-auth{
         height: 60%;
         text-align: center;
     }
+    .chats-content{
+        width: 90%;
+        height: 70%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+    }
+    .chats-title{
+        font-size: 23px;
+        font-weight: bold;
+        margin-top: 10px;
+        
+    }
+    .chats-buttons {
+        width: 100%;
+        height: 70%;
+        gap: 15px;
+    }
+    
+    .chats-buttons button{
+        padding: 7px;
+        width: 60%;
+    }
+    .pagination{
+        font-size: 12px;
+        margin-top: 10px;
+    }
 }
