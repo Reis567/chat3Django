@@ -89,14 +89,14 @@ Here are some screenshots of the desktop version of the application:
 
 Here are some screenshots of the mobile version of the application:
 
-- ![Chat Room on Mobile](chat_room_mobile.PNG)
-- ![Available Rooms on Mobile](chat_mobile.PNG)
+- ![Chat Room on Mobile](chat_room%20mobile.PNG)
+- ![Available Rooms on Mobile](chats%20mobile.PNG)
 - ![Profile Edit on Mobile](editprofilemobile.PNG)
 - ![Home on Mobile](homemob.PNG)
 - ![Mobile Header](homeheadermob.PNG)
-- ![Login on Mobile](login_mobile.PNG)
+- ![Login on Mobile](login%20mobile.PNG)
 - ![User Profile on Mobile](profilemobile.PNG)
-- ![Registration on Mobile](register_mobile.PNG)
+- ![Registration on Mobile](register%20mobile.PNG)
 
 ## Português
 
@@ -189,12 +189,12 @@ Aqui estão algumas capturas de tela da versão para desktop do aplicativo:
 
 Aqui estão algumas capturas de tela da versão móvel do aplicativo:
 
-- ![Sala de Chat no Mobile](chat_room_mobile.PNG)
-- ![Salas Disponíveis no Mobile](chat_mobile.PNG)
+- ![Sala de Chat no Mobile](chat_room%20mobile.PNG)
+- ![Salas Disponíveis no Mobile](chats%20mobile.PNG)
 - ![Edição de Perfil no Mobile](editprofilemobile.PNG)
 - ![Página Inicial no Mobile](homemob.PNG)
 - ![Header Mobile](homeheadermob.PNG)
-- ![Login no Mobile](login_mobile.PNG)
+- ![Login no Mobile](login%20mobile.PNG)
 - ![Perfil de Usuário no Mobile](profilemobile.PNG)
-- ![Registro no Mobile](register_mobile.PNG)
+- ![Registro no Mobile](register%20mobile.PNG)
 
