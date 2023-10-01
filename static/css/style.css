@@ -1359,4 +1359,79 @@ nav .nav-auth{
     .chat_room-balao-ele{
         font-size: 18px;
     }
+    .profile-content{
+        width: 90%;
+        height: 80%;
+    }
+    .profile-banner img{
+        width: 100%;
+        height: 15%;
+    }
+    .profile-pic img{
+        width: 150px;
+        height: 150px;
+        left: 1%;
+        top: 10%;
+    
+    }
+    .profile-user{
+        top: 31%;
+        left: 5.8%;
+    }
+    .profile-user h1{
+        font-size: 30px;
+    }
+    .prof-edit-btn{
+        top: 30%;
+        right: 4%;
+    }
+    .prof-edit-btn i{
+        margin-right: 10px;
+    }
+    .profile-infos{
+        width: 90%;
+        position:absolute;
+        bottom: 5%;
+        left: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .profile-name{
+        width: 100%;
+        height: 30%;
+    }
+    .profile-frst{
+        width: 100%;
+    }
+    .profile-desc{
+        width: 100%;
+    }
+    .profile-description{
+        width: 100%;
+        height: 120px;
+    }
+    .profile-label{
+        width: 100%;
+        margin-bottom: 2px;
+        padding-left: 3px;
+        font-size: 12px;
+      }
+      .profile-desc .profile-label{
+        width: 100%;
+        margin-bottom: 2px;
+        padding-left: 3px;
+        font-size: 12px;
+      }
+      .profile-frst{
+        width: 100%;
+      }
+      .profile-last{
+        width: 100%;
+      }
+      .profile-email{
+        width: 100%;
+      }
+    
 }

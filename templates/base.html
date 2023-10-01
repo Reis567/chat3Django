@@ -94,6 +94,7 @@
             const loginContent = document.querySelector('.login-content');
             const registerContent = document.querySelector('.register-content');
             const profileContent = document.querySelector('.profile-content');
+            const chatRoomContent = document.querySelector('.chat_room-content'); 
 
             function handleButtonClick(event){
                 if(event.type === "touchstart")event.preventDefault();
@@ -106,6 +107,9 @@
             function handleButtonClick3(event){
                 profileContent.classList.toggle('zindex');
             }
+            function handleButtonClick4(event){
+                chatRoomContent.classList.toggle('zindex');
+            }
 
             btnMenu.addEventListener('click', handleButtonClick);
             btnMenu.addEventListener('touchstart', handleButtonClick);
@@ -115,6 +119,9 @@
 
             btnMenu.addEventListener('click', handleButtonClick3);
             btnMenu.addEventListener('touchstart', handleButtonClick3);
+            btnMenu.addEventListener('click', handleButtonClick4);
+            
+            btnMenu.addEventListener('touchstart', handleButtonClick4);
         </script>       
     </body>
     </html>
